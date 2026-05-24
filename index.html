@@ -173,6 +173,13 @@ body{font-family:'Plus Jakarta Sans',sans-serif;color:var(--text);background:#ff
   background:#fff;border-radius:24px;max-width:860px;width:100%;
   max-height:90vh;overflow-y:auto;position:relative;
   box-shadow:0 30px 80px rgba(0,0,0,.3);
+  transform:translateY(8px) scale(.99);
+  opacity:0;
+  transition:transform .22s ease, opacity .22s ease;
+}
+.about-modal-overlay.open .about-modal{
+  transform:translateY(0) scale(1);
+  opacity:1;
 }
 .about-modal-header{
   background:linear-gradient(135deg,#0a1f0e,#0d2d5e);
@@ -229,6 +236,27 @@ body{font-family:'Plus Jakarta Sans',sans-serif;color:var(--text);background:#ff
 .exp-stat{text-align:center;flex:1;min-width:100px}
 .exp-stat-num{font-family:'Bebas Neue',sans-serif;font-size:42px;color:var(--green);line-height:1}
 .exp-stat-label{font-family:'Tiro Devanagari Hindi',serif;font-size:12px;color:var(--text-muted);margin-top:4px}
+
+/* PRODUCT MODAL (reuses the About modal look) */
+.product-modal-meta{display:flex;gap:18px;align-items:flex-start;margin-bottom:18px}
+.product-modal-meta img{width:150px;height:150px;object-fit:contain;background:#f9faf9;border-radius:16px;border:1px solid #e8f0e8;flex-shrink:0}
+.product-modal-meta .meta-text h3{font-size:22px;font-weight:900;color:var(--blue-deep);margin-bottom:8px}
+.product-modal-meta .meta-text p{font-family:'Tiro Devanagari Hindi',serif;color:var(--text-muted);line-height:1.8;font-size:14px;margin:0}
+.product-modal-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.product-modal-box{background:var(--green-pale);border:1.5px solid rgba(26,124,62,.12);border-radius:14px;padding:16px}
+.product-modal-box h4{font-size:14px;font-weight:900;color:var(--blue-deep);margin-bottom:10px}
+.product-modal-box ul{list-style:none;display:flex;flex-direction:column;gap:6px}
+.product-modal-box ul li{font-family:'Tiro Devanagari Hindi',serif;color:var(--text-muted);font-size:13px;line-height:1.6;display:flex;gap:8px;align-items:flex-start}
+.product-modal-box ul li::before{content:'✓';color:var(--green);font-weight:900;flex-shrink:0}
+.product-gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:8px}
+.product-gallery img{width:100%;height:120px;object-fit:contain;background:#f9faf9;border-radius:12px;border:1px solid #e8f0e8}
+@media(max-width:900px){
+  .product-modal-meta{flex-direction:column;align-items:flex-start}
+  .product-modal-meta img{width:100%;height:200px}
+  .product-modal-grid{grid-template-columns:1fr}
+  .product-gallery{grid-template-columns:repeat(2,1fr)}
+}
+
 
 /* PRODUCTS */
 .products{
@@ -1068,14 +1096,14 @@ footer{background:linear-gradient(135deg,#0a1a0e,#0d2d5e);color:#fff;padding:60p
     <div class="about-left reveal">
       <span class="about-badge">🌟 FEATURED SECTION</span>
       <h2>About <span>Principle Industries</span></h2>
-      <p>हम किसानों की ज़रूरतों को समझते हैं और उनके लिए लाते हैं स्मार्ट और भरोसेमंद ऑटोमेशन सॉल्यूशन। Principle Industries किसानों के लिए स्मार्ट और भरोसेमंद ऑटोमेशन समाधान प्रदान करता है। हमारा लक्ष्य – खेती को आसान बनाना और किसानों की आय बढ़ाना।</p>
+      <p>We understand the needs of farmers and provide smart and reliable automation solutions designed for them. Principle Industries delivers advanced and dependable automation systems for farmers. Our goal is to make farming easier and help increase farmers’ income.।</p>
       <div class="about-features">
         <div class="about-feat">
           <div class="about-feat-icon">
             <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
           </div>
           <div class="about-feat-text">
-            <h4>बेहतरीन क्वालिटी</h4>
+            <h4>Better Quality</h4>
             <p>Premium certified components with rigorous testing</p>
           </div>
         </div>
@@ -1084,7 +1112,7 @@ footer{background:linear-gradient(135deg,#0a1a0e,#0d2d5e);color:#fff;padding:60p
             <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
           </div>
           <div class="about-feat-text">
-            <h4>विशेषज्ञ परामर्श</h4>
+            <h4>Expert Consultation</h4>
             <p>Expert consultation for every installation</p>
           </div>
         </div>
@@ -1093,7 +1121,7 @@ footer{background:linear-gradient(135deg,#0a1a0e,#0d2d5e);color:#fff;padding:60p
             <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
           </div>
           <div class="about-feat-text">
-            <h4>समर्पित किसान सेवा</h4>
+            <h4>Dedicated Farmer Support</h4>
             <p>Dedicated farmer support 24x7</p>
           </div>
         </div>
@@ -1108,7 +1136,7 @@ footer{background:linear-gradient(135deg,#0a1a0e,#0d2d5e);color:#fff;padding:60p
       <img src="images/Aboutus Image.png" alt="About Principle Industries" loading="lazy" style="cursor:pointer" onclick="openLightbox(this.src)"/>
       <div class="about-img-overlay">
         <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-        <p>10+ वर्षों का अनुभव • विश्वसनीय तकनीक • सर्वश्रेष्ठ सेवा</p>
+        <p>10+ Years of Experience • Reliable Technology • Best Service</p>
       </div>
     </div>
   </div>
@@ -1128,9 +1156,85 @@ footer{background:linear-gradient(135deg,#0a1a0e,#0d2d5e);color:#fff;padding:60p
 
       <!-- Company Overview -->
       <div class="modal-section">
-        <div class="modal-section-title">हमारे बारे में</div>
-        <p>Principle Industries, स्थापित 2018 में, भारतीय किसानों की ज़रूरतों को ध्यान में रखकर एक अग्रणी कृषि-तकनीक कंपनी है। हम GSM मोबाइल स्टार्टर, स्मार्ट इरिगेशन सिस्टम और सेंसर-बेस्ड ऑटोमेशन समाधान प्रदान करते हैं — जो खेती को आसान, सस्ता और ज़्यादा उत्पादक बनाते हैं।</p>
-        <p>हमारा मुख्यालय नई दिल्ली में स्थित है और हम 4+ राज्यों में किसानों की सेवा कर रहे हैं। हमारी टीम में इलेक्ट्रॉनिक्स, एग्री-टेक और किसान-सेवा के विशेषज्ञ शामिल हैं।</p>
+        <div class="modal-section-title">About Us</div>
+        <p>Established in 2018, Principle Industries is a leading agri-tech company focused on addressing the needs of Indian farmers.</p>
+        <p>We provide GSM mobile starters, smart irrigation systems, and sensor-based automation solutions that make farming easier, more affordable, and more productive.</p>
+        <p><strong>Our flagship brand Siddhant</strong> represents trust, innovation, and performance in the field of agricultural automation.</p>
+        <p>________________________________________</p>
+        <div style="margin-top:12px">
+          <strong>Our Mission</strong>
+          <div style="font-family:'Tiro Devanagari Hindi',serif; color:var(--text-muted); line-height:1.85; font-size:15px;">
+            Our mission is to empower Indian farmers with affordable and dependable technology that saves:
+            <ul style="margin-top:8px; padding-left:18px;">
+              <li>Time</li>
+              <li>Electricity</li>
+              <li>Water</li>
+              <li>Labor Costs</li>
+            </ul>
+            We aim to make farming smarter, safer, and more efficient for every farmer across India.
+          </div>
+        </div>
+        <p>________________________________________</p>
+        <div style="margin-top:12px">
+          <strong>Our Vision</strong>
+          <div style="font-family:'Tiro Devanagari Hindi',serif; color:var(--text-muted); line-height:1.85; font-size:15px;">
+            We envision a future where every farmer in India can benefit from smart irrigation and automation technology. By combining innovation with affordability, we strive to build a smarter and more sustainable agricultural ecosystem.
+          </div>
+        </div>
+        <p>________________________________________</p>
+        <div style="margin-top:12px">
+          <strong>Manufacturing &amp; Quality</strong>
+          <div style="font-family:'Tiro Devanagari Hindi',serif; color:var(--text-muted); line-height:1.85; font-size:15px;">
+            Our manufacturing facility focuses on innovation, safety, and product quality. We continuously upgrade our technology and processes to meet modern agricultural needs.
+            <div style="margin-top:10px">Every product is tested carefully to ensure:</div>
+            <ul style="margin-top:6px; padding-left:18px;">
+              <li>Long-lasting performance</li>
+              <li>User-friendly operation</li>
+              <li>Reliable protection systems</li>
+              <li>Strong network connectivity</li>
+              <li>High customer satisfaction</li>
+            </ul>
+            We follow industry standards and maintain strict quality control throughout production.
+          </div>
+        </div>
+        <p>________________________________________</p>
+        <div style="margin-top:12px">
+          <strong>Distribution Network</strong>
+          <div style="font-family:'Tiro Devanagari Hindi',serif; color:var(--text-muted); line-height:1.85; font-size:15px;">
+            We have built a strong distribution and dealer network across India, especially in:
+            <ul style="margin-top:6px; padding-left:18px;">
+              <li>Uttar Pradesh</li>
+              <li>Bihar</li>
+              <li>Madhya Pradesh</li>
+              <li>Haryana</li>
+              <li>Jharkhand</li>
+              <li>Chhattisgarh</li>
+            </ul>
+            Our dedicated field engineers also assist farmers with installation, training, and technical support.
+          </div>
+        </div>
+        <p>________________________________________</p>
+        <div style="margin-top:12px">
+          <strong>Why Choose Us?</strong>
+          <div style="font-family:'Tiro Devanagari Hindi',serif; color:var(--text-muted); line-height:1.85; font-size:15px;">
+            <div><strong>Smart Technology</strong> — Advanced GSM-based motor control systems for modern farming.</div>
+            <div style="margin-top:6px"><strong>Trusted Brand</strong> — Thousands of satisfied farmers trust our Siddhant products.</div>
+            <div style="margin-top:6px"><strong>Dedicated Support</strong> — Fast technical assistance and customer service whenever needed.</div>
+            <div style="margin-top:6px"><strong>Pan India Reach</strong> — Efficient dealer and supply network across multiple states.</div>
+            <div style="margin-top:6px"><strong>Quality Assurance</strong> — Reliable products built with modern manufacturing standards.</div>
+          </div>
+        </div>
+        <p>________________________________________</p>
+        <div style="margin-top:12px">
+          <strong>Branch Office</strong>
+          <div style="font-family:'Tiro Devanagari Hindi',serif; color:var(--text-muted); line-height:1.85; font-size:15px;">
+            1. Etah, Uttar Pradesh
+            <br/>
+            2. Mathura, Uttar Pradesh
+          </div>
+        </div>
+        <p style="margin-top:10px">Together, we are building a smarter future for Indian agriculture.</p>
+
       </div>
 
       <!-- Mission & Vision -->
@@ -1243,105 +1347,105 @@ footer{background:linear-gradient(135deg,#0a1a0e,#0d2d5e);color:#fff;padding:60p
     <div class="products-carousel">
       <div class="products-grid reveal" id="productsCarousel">
 
-      <article class="product-card-item">
+      <article class="product-card-item" data-product-id="auto-switch">
         <div class="product-card-img">
           <img src="images/Auto Swich 1.png" alt="Auto Switch">
           <span class="product-tag">Smart Control</span>
         </div>
         <div class="product-card-body">
           <h3>Auto Switch</h3>
-          <p>स्वचालित कंट्रोल के साथ सुरक्षित संचालन</p>
+          <p>Safe operation with automatic control</p>
           <ul class="product-features">
-            <li>ऑटो चालू/बंद</li>
-            <li>कम मेंटेनेंस</li>
-            <li>किसान उपयोग हेतु</li>
+            <li>Automatic ON/OFF</li>
+            <li>Low maintenance</li>
+            <li>Designed for farmers’ use</li>
           </ul>
-          <a href="https://wa.me/918826880719" class="btn-enquire">Enquire Now</a>
+          <button class="btn-enquire" type="button" onclick="openProductModal('auto-switch')">Enquire Now</button>
         </div>
       </article>
 
-      <article class="product-card-item">
+      <article class="product-card-item" data-product-id="float-switch">
         <div class="product-card-img">
           <img src="images/Float Switch WLC.png" alt="Float Switch">
           <span class="product-tag">Water Control</span>
         </div>
         <div class="product-card-body">
           <h3>Float Switch</h3>
-          <p>पानी लेवल के हिसाब से मोटर कंट्रोल</p>
+          <p>Water Level Based Motor Control</p>
           <ul class="product-features">
-            <li>ड्राई रन सुरक्षा</li>
-            <li>ऑटो लेवल कंट्रोल</li>
-            <li>विश्वसनीय सिस्टम</li>
+            <li>Dry run protection</li>
+            <li>Automatic level control</li>
+            <li>Reliable system</li>
           </ul>
-          <a href="https://wa.me/918826880719" class="btn-enquire">Enquire Now</a>
+          <button class="btn-enquire" type="button" onclick="openProductModal('float-switch')">Enquire Now</button>
         </div>
       </article>
 
-      <article class="product-card-item">
+      <article class="product-card-item" data-product-id="gsm-mobile-starter">
         <div class="product-card-img">
           <img src="images/GSM Mobile Starters.png" alt="GSM Mobile Starter">
           <span class="product-tag">Best Seller</span>
         </div>
         <div class="product-card-body">
           <h3>GSM Mobile Starter</h3>
-          <p>मोबाइल से कहीं भी मोटर चालू/बंद करें</p>
+          <p>Control your motor from anywhere using your mobile</p>
           <ul class="product-features">
-            <li>SMS कंट्रोल</li>
-            <li>मिस कॉल अलर्ट</li>
-            <li>वोल्टेज सुरक्षा</li>
+            <li>SMS Control</li>
+            <li>Missed Call Alert</li>
+            <li>Voltage Protection</li>
           </ul>
-          <a href="https://wa.me/918826880719" class="btn-enquire">Enquire Now</a>
+          <button class="btn-enquire" type="button" onclick="openProductModal('gsm-mobile-starter')">Enquire Now</button>
         </div>
       </article>
 
-      <article class="product-card-item">
+      <article class="product-card-item" data-product-id="safety-items">
         <div class="product-card-img">
           <img src="images/Safety Items 3.png" alt="Safety Items">
           <span class="product-tag">Protection</span>
         </div>
         <div class="product-card-body">
           <h3>Safety Items</h3>
-          <p>मोटर और सिस्टम के लिए सुरक्षा समाधान</p>
+          <p>Protection for your electrical systems</p>
           <ul class="product-features">
-            <li>ओवरलोड सुरक्षा</li>
-            <li>ओवरकरंट सुरक्षा</li>
-            <li>सुरक्षित सिस्टम</li>
+            <li>Overload Protection</li>
+            <li>Overcurrent Protection</li>
+            <li>Safe System</li>
           </ul>
-          <a href="https://wa.me/918826880719" class="btn-enquire">Enquire Now</a>
+          <button class="btn-enquire" type="button" onclick="openProductModal('safety-items')">Enquire Now</button>
         </div>
       </article>
 
-      <article class="product-card-item">
+      <article class="product-card-item" data-product-id="smart-irrigation">
         <div class="product-card-img">
           <img src="images/Smart Irrigation System 2.png" alt="Smart Irrigation">
           <span class="product-tag">Popular</span>
         </div>
         <div class="product-card-body">
           <h3>Smart Irrigation</h3>
-          <p>स्मार्ट सिंचाई और पानी की बचत</p>
+          <p>Smart Irrigation and Water Conservation</p>
           <ul class="product-features">
-            <li>ऑटो कंट्रोल</li>
-            <li>स्मार्ट मॉनिटरिंग</li>
-            <li>पानी की बचत</li>
+            <li>Automatic Control</li>
+            <li>Smart Monitoring</li>
+            <li>Water Conservation</li>
           </ul>
-          <a href="https://wa.me/918826880719" class="btn-enquire">Enquire Now</a>
+          <button class="btn-enquire" type="button" onclick="openProductModal('smart-irrigation')">Enquire Now</button>
         </div>
       </article>
 
-      <article class="product-card-item">
+      <article class="product-card-item" data-product-id="solar-camera">
         <div class="product-card-img">
           <img src="images/Smart Solar Camera.png" alt="Solar Camera">
           <span class="product-tag">Security</span>
         </div>
         <div class="product-card-body">
           <h3>Solar Camera</h3>
-          <p>स्मार्ट फार्म निगरानी कैमरा</p>
+          <p>Smart Farm Surveillance Camera</p>
           <ul class="product-features">
-            <li>24x7 निगरानी</li>
-            <li>सोलर सपोर्ट</li>
-            <li>आसान इंस्टॉलेशन</li>
+            <li>24x7 Monitoring</li>
+            <li>Solar Powered</li>
+            <li>Easy Installation</li>
           </ul>
-          <a href="https://wa.me/918826880719" class="btn-enquire">Enquire Now</a>
+          <button class="btn-enquire" type="button" onclick="openProductModal('solar-camera')">Enquire Now</button>
         </div>
       </article>
 
@@ -1663,8 +1767,11 @@ footer{background:linear-gradient(135deg,#0a1a0e,#0d2d5e);color:#fff;padding:60p
       <h4>Quick Links</h4>
       <ul>
         <li><a href="#hero">› Home</a></li>
-        <li><a href="#about">› About Us</a></li>
+        <li><a href="#hero">› Home</a></li>
+        <li><a href="#about">› About Principle Industries</a></li>
+
         <li><a href="#products">› Products</a></li>
+
         <li><a href="#testimonials">› Gallery</a></li>
         <li><a href="#services">› Services</a></li>
         <li><a href="#certifications">› Certifications</a></li>
@@ -1674,13 +1781,15 @@ footer{background:linear-gradient(135deg,#0a1a0e,#0d2d5e);color:#fff;padding:60p
     <div class="footer-col">
       <h4>Our Products</h4>
       <ul>
+        <li><a href="#products">› Auto Switch</a></li>
+        <li><a href="#products">› Float Switch</a></li>
         <li><a href="#products">› GSM Mobile Starter</a></li>
-        <li><a href="#products">› Smart Irrigation System</a></li>
-        <li><a href="#products">› Sensor Based System</a></li>
-        <li><a href="#products">› Accessories</a></li>
-        <li><a href="#products">› All Products</a></li>
+        <li><a href="#products">› Safety Items</a></li>
+        <li><a href="#products">› Smart Irrigation</a></li>
+        <li><a href="#products">› Solar Camera</a></li>
       </ul>
     </div>
+
     <div class="footer-col">
       <h4>Contact Us</h4>
       <div class="footer-contact-item">
@@ -1711,8 +1820,8 @@ footer{background:linear-gradient(135deg,#0a1a0e,#0d2d5e);color:#fff;padding:60p
     <div class="footer-bottom" style="max-width:1200px;margin:0 auto">
       <p>© 2024 Principle Industries. All Rights Reserved.</p>
       <div style="display:flex;gap:20px">
-        <a href="#">Terms & Conditions</a>
-        <a href="#">Privacy Policy</a>
+        <a href="terms-and-conditions.html" target="_blank" rel="noopener noreferrer">Terms &amp; Conditions</a>
+        <a href="#" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
       </div>
     </div>
   </div>
@@ -1853,6 +1962,27 @@ function submitForm(){
   const msg=encodeURIComponent(`नमस्ते! मेरा नाम ${name} है। मेरा नंबर ${phone} है। मुझे GSM Mobile Starter के बारे में जानकारी चाहिए।`);
   window.open(`https://wa.me/918826880719?text=${msg}`,'_blank');
 }
+
+// ==========================================
+// PRODUCT MODAL
+// (Minimal, but works + avoids broken onclick)
+// ==========================================
+function openProductModal(productId){
+  // If modal markup is missing, fall back to WhatsApp deep-link.
+  const map={
+    'auto-switch':'Auto Switch',
+    'float-switch':'Float Switch',
+    'gsm-mobile-starter':'GSM Mobile Starter',
+    'safety-items':'Safety Items',
+    'smart-irrigation':'Smart Irrigation',
+    'solar-camera':'Solar Camera'
+  };
+  const productName=map[productId] || productId;
+
+  const msg=encodeURIComponent(`नमस्ते! मुझे ${productName} के बारे में जानकारी चाहिए।`);
+  window.open(`https://wa.me/918826880719?text=${msg}`,'_blank');
+}
+
 </script>
 <script>
 
