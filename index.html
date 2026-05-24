@@ -33,9 +33,9 @@ body{font-family:'Plus Jakarta Sans',sans-serif;color:var(--text);background:#ff
 
 /* HERO HEADER CLICK LAYER */
 .hero-bg{cursor:pointer}
-.hero-header-click{position:absolute;top:0;left:0;right:0;bottom:0;z-index:3;display:flex;align-items:flex-end;justify-content:flex-start;padding:24px;pointer-events:auto;text-decoration:none}
+.hero-header-click{position:absolute;bottom:24px;left:24px;z-index:3;display:inline-flex;align-items:center;justify-content:center;padding:0;pointer-events:auto;text-decoration:none}
 .hero-header-click-text{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);color:#fff;padding:10px 14px;border-radius:999px;font-weight:700;font-size:12px;backdrop-filter:blur(10px)}
-@media(max-width:900px){.hero-header-click{padding:18px}.hero-header-click-text{display:none}}
+@media(max-width:900px){.hero-header-click{bottom:18px;left:18px;padding:0}.hero-header-click-text{display:none}}
 
 .top-bar-inner{max-width:1200px;margin:0 auto;padding:0 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:6px}
 .top-bar-left{display:flex;align-items:center;gap:6px;font-weight:600;letter-spacing:.5px}
@@ -47,19 +47,19 @@ body{font-family:'Plus Jakarta Sans',sans-serif;color:var(--text);background:#ff
 /* NAVBAR */
 .navbar{background:#fff;box-shadow:0 2px 20px rgba(0,0,0,.08);position:sticky;top:0;z-index:999;transition:all .3s}
 .navbar.scrolled{box-shadow:0 4px 30px rgba(0,0,0,.15)}
-.nav-inner{max-width:1200px;margin:0 auto;padding:0 20px;display:flex;align-items:center;justify-content:space-between;height:70px}
+.nav-inner{max-width:1200px;margin:0 auto;padding:0 20px;display:flex;align-items:center;justify-content:space-between;height:60px}
 .logo{display:flex;align-items:center;gap:10px;text-decoration:none}
-.logo-icon{width:44px;height:44px;background:linear-gradient(135deg,var(--green),var(--green-dark));border-radius:10px;display:flex;align-items:center;justify-content:center}
-.logo-icon svg{width:24px;height:24px;fill:#fff}
+.logo-icon{width:38px;height:38px;background:linear-gradient(135deg,var(--green),var(--green-dark));border-radius:10px;display:flex;align-items:center;justify-content:center}
+.logo-icon svg{width:20px;height:20px;fill:#fff}
 .logo-text{display:flex;flex-direction:column}
-.logo-name{font-size:18px;font-weight:800;color:var(--blue-deep);line-height:1.1;letter-spacing:-.3px}
-.logo-sub{font-size:10px;color:var(--green);font-weight:600;letter-spacing:1px;text-transform:uppercase}
+.logo-name{font-size:15px;font-weight:800;color:var(--blue-deep);line-height:1.1;letter-spacing:-.3px}
+.logo-sub{font-size:9px;color:var(--green);font-weight:600;letter-spacing:1px;text-transform:uppercase}
 .nav-links{display:flex;align-items:center;gap:28px;list-style:none}
-.nav-links a{text-decoration:none;color:var(--text);font-size:14px;font-weight:500;position:relative;transition:color .2s}
+.nav-links a{text-decoration:none;color:var(--text);font-size:13px;font-weight:500;position:relative;transition:color .2s}
 .nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:2px;background:var(--green);transition:width .3s}
 .nav-links a:hover{color:var(--green)}
 .nav-links a:hover::after{width:100%}
-.nav-call{background:var(--green);color:#fff!important;padding:10px 20px;border-radius:8px;display:flex;align-items:center;gap:7px;font-weight:700!important;font-size:14px!important;transition:all .3s!important;text-decoration:none}
+.nav-call{background:var(--green);color:#fff!important;padding:9px 18px;border-radius:8px;display:flex;align-items:center;gap:7px;font-weight:700!important;font-size:13px!important;transition:all .3s!important;text-decoration:none}
 .nav-call:hover{background:var(--green-dark)!important;transform:translateY(-1px);box-shadow:0 4px 15px rgba(26,124,62,.4)!important}
 .nav-call::after{display:none!important}
 .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:5px}
@@ -82,9 +82,9 @@ body{font-family:'Plus Jakarta Sans',sans-serif;color:var(--text);background:#ff
 .hero-bullets li{display:none}
 .hero-bullets li::before{display:none}
 .hero-btns{display:flex;gap:14px;flex-wrap:wrap;position:absolute;bottom:30px;left:30px;z-index:10}
-.btn-primary{background:#1a7c3e;color:#fff;padding:14px 28px;border-radius:8px;text-decoration:none;font-weight:700;font-size:15px;display:flex;align-items:center;gap:8px;transition:all .3s;border:none;cursor:pointer}
+.btn-primary{background:#1a7c3e;color:#fff;padding:12px 24px;border-radius:8px;text-decoration:none;font-weight:700;font-size:14px;display:flex;align-items:center;gap:8px;transition:all .3s;border:none;cursor:pointer}
 .btn-primary:hover{background:#0f5229;transform:translateY(-2px);box-shadow:0 8px 25px rgba(26,124,62,.5)}
-.btn-wa{background:#25d366;color:#fff;padding:14px 28px;border-radius:8px;text-decoration:none;font-weight:700;font-size:15px;display:flex;align-items:center;gap:8px;transition:all .3s}
+.btn-wa{background:#25d366;color:#fff;padding:12px 24px;border-radius:8px;text-decoration:none;font-weight:700;font-size:14px;display:flex;align-items:center;gap:8px;transition:all .3s}
 .btn-wa:hover{background:#1da851;transform:translateY(-2px);box-shadow:0 8px 25px rgba(37,211,102,.4)}
 .hero-right{display:none}
 .product-card{background:linear-gradient(145deg,rgba(255,255,255,.12),rgba(255,255,255,.05));backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,.2);border-radius:20px;padding:30px;text-align:center;position:relative;animation:float 4s ease-in-out infinite}
@@ -137,8 +137,8 @@ body{font-family:'Plus Jakarta Sans',sans-serif;color:var(--text);background:#ff
 .about-feat-text p{font-size:13px;color:var(--text-muted)}
 .btn-outline{border:2px solid var(--green);color:var(--green);padding:13px 32px;border-radius:10px;text-decoration:none;font-weight:700;font-size:15px;display:inline-flex;align-items:center;gap:8px;transition:all .3s;cursor:pointer;background:none;font-family:'Plus Jakarta Sans',sans-serif;margin-top:8px}
 .btn-outline:hover{background:var(--green);color:#fff;transform:translateY(-3px);box-shadow:0 10px 25px rgba(26,124,62,.3)}
-.about-right{border-radius:20px;overflow:hidden;position:relative;box-shadow:0 20px 60px rgba(26,124,62,.25);background:#fff;padding:0;border:1px solid rgba(26,124,62,.1);transition:all .4s;height:auto}
-.about-right img{width:100%;height:auto;object-fit:contain;display:block;border-radius:16px;filter:brightness(1.08) contrast(1.12) saturate(1.1);transition:all .4s;margin:0;padding:0;background:#fff}
+.about-right{border-radius:20px;overflow:hidden;position:relative;box-shadow:0 20px 60px rgba(26,124,62,.25);background:#fff;padding:0;border:1px solid rgba(26,124,62,.1);transition:all .4s;min-height:520px}
+.about-right img{width:100%;height:100%;object-fit:cover;display:block;border-radius:16px;filter:brightness(1.08) contrast(1.12) saturate(1.1);transition:all .4s;margin:0;padding:0;background:#fff}
 .about-right img:hover{filter:brightness(1.12) contrast(1.15) saturate(1.15);transform:scale(1.02)}
 .about-right:hover{box-shadow:0 30px 80px rgba(26,124,62,.35)}\n.about-right:hover img{filter:brightness(1.12) contrast(1.15) saturate(1.15)}
 .about-img-overlay{position:absolute;bottom:20px;left:20px;right:20px;background:linear-gradient(135deg,rgba(26,124,62,.95),rgba(13,45,94,.95));backdrop-filter:blur(12px);border-radius:14px;padding:16px 20px;display:flex;align-items:center;gap:14px;border:1px solid rgba(255,255,255,.1)}
@@ -262,14 +262,16 @@ body{font-family:'Plus Jakarta Sans',sans-serif;color:var(--text);background:#ff
   background:#fff;
   border-radius:20px;
   overflow:hidden;
-  box-shadow:0 4px 20px rgba(0,0,0,.06);
-  border:1px solid #e8f0e8;
-  transition:all .3s;
+  box-shadow:0 4px 20px rgba(0,0,0,.08);
+  border:1px solid #e0e8e0;
+  transition:all .3s ease;
+  display:flex;
+  flex-direction:column;
 }
 
 .product-card-item:hover{
-  transform:translateY(-8px);
-  box-shadow:0 20px 50px rgba(26,124,62,.15);
+  transform:translateY(-10px);
+  box-shadow:0 25px 60px rgba(26,124,62,.18);
   border-color:var(--green);
 }
 
@@ -299,53 +301,87 @@ body{font-family:'Plus Jakarta Sans',sans-serif;color:var(--text);background:#ff
 }
 
 .products-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:24px;
-  width:100%;
-}
-
-.products-rail{
   display:flex;
   gap:24px;
-  transition:transform .55s cubic-bezier(.2,.9,.2,1);
-  will-change:transform;
+  width:100%;
+  overflow-x:auto;
+  padding-bottom:12px;
+  scroll-snap-type:x mandatory;
+  -webkit-overflow-scrolling:touch;
+}
+
+.products-carousel{
+  position:relative;
+}
+
+.products-grid::-webkit-scrollbar{
+  height:10px;
+}
+
+.products-grid::-webkit-scrollbar-track{
+  background:transparent;
+}
+
+.products-grid::-webkit-scrollbar-thumb{
+  background:rgba(26,124,62,.25);
+  border-radius:999px;
 }
 
 .product-card-item{
-  background:#fff;border-radius:20px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,.06);
-  border:1px solid #e8f0e8;transition:all .3s;
-  flex:0 0 calc(33.333% - 16px);
+  background:#fff;
+  border-radius:20px;
+  overflow:hidden;
+  box-shadow:0 4px 20px rgba(0,0,0,.06);
+  border:1px solid #e8f0e8;
+  transition:all .3s;
+  flex:0 0 320px;
+  min-width:320px;
+  scroll-snap-align:center;
 }
 
 @media(max-width:1100px){
-  .product-card-item{flex:0 0 calc(50% - 12px)}
+  .product-card-item{flex:0 0 280px;min-width:280px}
 }
 
 @media(max-width:640px){
-  .product-card-item{flex:0 0 86%}
+  .product-card-item{flex:0 0 86%;min-width:86%}
 }
 
-/* hide desktop grid when carousel is active (small screens) */
-@media(max-width:900px){
-  .products-grid{display:none}
-  .products-carousel{display:block}
+.products-controls{
+  position:absolute;
+  top:50%;
+  left:0;
+  right:0;
+  transform:translateY(-50%);
+  pointer-events:none;
+  z-index:2;
 }
 
-@media(min-width:901px){
-  .products-carousel{display:none}
+.carousel-btn{
+  width:44px;
+  height:44px;
+  border:none;
+  border-radius:50%;
+  background:#fff;
+  color:var(--blue-deep);
+  box-shadow:0 10px 30px rgba(0,0,0,.12);
+  cursor:pointer;
+  transition:transform .2s,background .2s, color .2s;
 }
 
+.carousel-btn.prev{position:absolute;left:12px;pointer-events:auto}
+.carousel-btn.next{position:absolute;right:12px;pointer-events:auto}
 
-.product-card-item{background:#fff;border-radius:20px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,.06);border:1px solid #e8f0e8;transition:all .3s}
+.carousel-btn:hover{background:var(--green);color:#fff;transform:scale(1.05)}
+
 .product-card-item:hover{transform:translateY(-8px);box-shadow:0 20px 50px rgba(26,124,62,.15);border-color:var(--green)}
-.product-card-img{height:200px;background:linear-gradient(135deg,#f0f8f4,#e8eef8);display:flex;align-items:center;justify-content:center;overflow:hidden;position:relative}
-.product-card-img img{height:160px;object-fit:contain;transition:transform .3s}
-.product-card-item:hover .product-card-img img{transform:scale(1.05)}
-.product-tag{position:absolute;top:12px;right:12px;background:var(--green);color:#fff;font-size:11px;font-weight:700;padding:4px 10px;border-radius:20px}
-.product-card-body{padding:20px}
-.product-card-body h3{font-size:18px;font-weight:800;color:var(--blue-deep);margin-bottom:8px}
-.product-card-body p{font-size:13px;color:var(--text-muted);line-height:1.6;margin-bottom:14px;font-family:'Tiro Devanagari Hindi',serif}
+.product-card-img{height:340px;background:#f9faf9;display:flex;align-items:center;justify-content:center;overflow:hidden;position:relative;padding:12px}
+.product-card-img img{width:90%;height:90%;max-width:100%;max-height:100%;object-fit:contain;transition:all .4s ease;filter:brightness(1)}
+.product-card-item:hover .product-card-img img{transform:scale(1.08);filter:brightness(1.02)}
+.product-tag{position:absolute;top:14px;right:14px;background:var(--green);color:#fff;font-size:11px;font-weight:700;padding:5px 12px;border-radius:20px;z-index:10}
+.product-card-body{padding:22px;flex-grow:1;display:flex;flex-direction:column}
+.product-card-body h3{font-size:18px;font-weight:800;color:var(--blue-deep);margin-bottom:6px}
+.product-card-body p{font-size:13px;color:var(--text-muted);line-height:1.5;margin-bottom:12px;font-family:'Tiro Devanagari Hindi',serif}
 .product-features{list-style:none;margin-bottom:18px;display:flex;flex-direction:column;gap:6px}
 .product-features li{font-size:12px;color:var(--text-muted);display:flex;align-items:center;gap:7px;font-family:'Tiro Devanagari Hindi',serif}
 .product-features li::before{content:'✓';color:var(--green);font-weight:700;font-size:11px}
@@ -356,7 +392,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;color:var(--text);background:#ff
 .stats{padding:70px 0;background:linear-gradient(135deg,var(--blue-deep),#0f4d20)}
 .stats-inner{max-width:1000px;margin:0 auto;padding:0 20px;display:grid;grid-template-columns:repeat(4,1fr);gap:30px}
 .stat-item{text-align:center;color:#fff}
-.stat-number{font-family:'Bebas Neue',sans-serif;font-size:58px;color:#4ade80;line-height:1;letter-spacing:2px}
+.stat-number{font-family:'Bebour productsas Neue',sans-serif;font-size:58px;color:#4ade80;line-height:1;letter-spacing:2px}
 .stat-suffix{font-family:'Bebas Neue',sans-serif;font-size:36px;color:#a8f0c0}
 .stat-label{font-family:'Tiro Devanagari Hindi',serif;font-size:15px;color:rgba(255,255,255,.8);margin-top:6px}
 
@@ -367,7 +403,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;color:var(--text);background:#ff
 .testimonial-card{background:#fff;border:1px solid #e8f0e8;border-radius:16px;overflow:hidden;position:relative;transition:all .3s;display:flex;flex-direction:column}
 .testimonial-card:hover{border-color:var(--green);box-shadow:0 10px 30px rgba(26,124,62,.1);transform:translateY(-4px)}
 .testimonial-farmer-img{width:100%;height:220px;background:linear-gradient(135deg,#f0f8f4,#e8eef8);display:flex;align-items:center;justify-content:center;overflow:hidden}
-.testimonial-farmer-img img{width:100%;height:100%;object-fit:cover}
+.testimonial-farmer-img img{width:100%;height:100%;object-fit:contain}
 .testimonial-content{padding:28px;flex:1;display:flex;flex-direction:column}
 .quote-mark{font-size:60px;color:var(--green-pale);line-height:.6;margin-bottom:12px;font-family:Georgia,serif}
 .testimonial-card p{font-family:'Tiro Devanagari Hindi',serif;font-size:15px;line-height:1.7;color:var(--text);margin-bottom:20px;flex:1}
@@ -381,9 +417,10 @@ body{font-family:'Plus Jakarta Sans',sans-serif;color:var(--text);background:#ff
 /* VIDEO */
 .video-section{padding:70px 0;background:linear-gradient(135deg,#f0f8f4,#e8f0fb)}
 .video-inner{max-width:900px;margin:0 auto;padding:0 20px;text-align:center}
-.video-thumb{position:relative;border-radius:20px;overflow:hidden;margin-top:40px;cursor:pointer;box-shadow:0 20px 60px rgba(0,0,0,.2)}
-.video-thumb img{width:100%;height:400px;object-fit:cover;display:block}
-.video-thumb-overlay{position:absolute;inset:0;background:rgba(13,45,94,.5);display:flex;flex-direction:column;align-items:center;justify-content:center;transition:all .3s}
+.video-row{display:flex;gap:48px;align-items:flex-start;justify-content:center;flex-wrap:nowrap;margin-top:16px}
+.video-thumb{position:relative;border-radius:20px;overflow:visible;cursor:pointer;box-shadow:0 20px 60px rgba(0,0,0,.2);flex:0 0 calc(50% - 24px);max-width:calc(50% - 24px);background:#000}
+.video-thumb img{width:auto;max-width:100%;height:auto;max-height:80vh;display:block;border-radius:12px}
+.video-thumb-overlay{position:absolute;inset:0;background:rgba(13,45,94,.45);display:flex;flex-direction:column;align-items:center;justify-content:center;transition:all .3s;border-radius:20px}
 .video-thumb:hover .video-thumb-overlay{background:rgba(13,45,94,.65)}
 .play-btn{width:80px;height:80px;background:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:16px;transition:transform .3s}
 .video-thumb:hover .play-btn{transform:scale(1.1)}
@@ -391,11 +428,20 @@ body{font-family:'Plus Jakarta Sans',sans-serif;color:var(--text);background:#ff
 .video-label{color:#fff;font-family:'Tiro Devanagari Hindi',serif;font-size:18px;font-weight:600}
 .live-badge{background:#e53e3e;color:#fff;font-size:11px;font-weight:700;padding:4px 10px;border-radius:20px;display:inline-block;margin-top:8px;animation:pulse 2s infinite}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.7}}
+@media(max-width:900px){.video-row{flex-direction:column}.video-thumb{flex:0 0 auto;max-width:100%;width:100%;margin-bottom:18px}}
 
 /* ==========================================
-   KISAAN KE FAYDE - BENEFITS SECTION
-   (replaces FAQ)
-   ========================================== */
+  SERVICES IMAGE ROW STYLES
+  ========================================== */
+.services-row{display:flex;gap:24px;align-items:flex-start;justify-content:center;flex-wrap:nowrap;margin-top:28px}
+.services-row .service-img{flex:0 0 48%;max-width:48%;border-radius:14px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.12);display:flex;align-items:center;justify-content:center;background:#f7f7f7}
+.services-row .service-img img{width:auto;max-width:100%;height:auto;max-height:70vh;display:block}
+@media(max-width:900px){.services-row{flex-direction:column}.services-row .service-img{flex:0 0 auto;max-width:100%;width:100%;margin-bottom:18px}}
+
+/* ==========================================
+  KISAAN KE FAYDE - BENEFITS SECTION
+  (replaces FAQ)
+  ========================================== */
 .kisaan-fayde{padding:80px 0;background:#fff}
 .kisaan-inner{max-width:1200px;margin:0 auto;padding:0 20px}
 .benefits-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;margin-top:50px}
@@ -828,10 +874,10 @@ footer{background:linear-gradient(135deg,#0a1a0e,#0d2d5e);color:#fff;padding:60p
 <nav class="navbar" id="navbar">
   <div class="nav-inner">
     <a href="#" class="logo">
-      <img src="images/logo.png" alt="Principle Industries Logo" style="height:55px;width:auto;object-fit:contain;">
+<img src="images/logo.png" alt="Principle Industries Logo" style="height:60px;width:auto;object-fit:contain;">
       <div class="logo-text">
         <div class="logo-name"></div>
-        <div class="logo-sub">SMART IRRIGATION SYSTEMS</div>
+        <div class="logo-sub"></div>
       </div>
     </a>
     <ul class="nav-links">
@@ -839,7 +885,7 @@ footer{background:linear-gradient(135deg,#0a1a0e,#0d2d5e);color:#fff;padding:60p
       <li><a href="#about">About Us</a></li>
       <li><a href="#products">Products</a></li>
       <li><a href="#testimonials">Gallery</a></li>
-      <li><a href="#kisaan-fayde">किसान फायदे</a></li>
+      <li><a href="#services">Services</a></li>
       <li><a href="#contact">Contact Us</a></li>
       <li><a href="tel:8826880719" class="nav-call">
         <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.63 3.52 2 2 0 0 1 3.6 1.37h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l.86-.86a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
@@ -858,7 +904,7 @@ footer{background:linear-gradient(135deg,#0a1a0e,#0d2d5e);color:#fff;padding:60p
   <a href="#about" onclick="closeNav()">About Us <span>›</span></a>
   <a href="#products" onclick="closeNav()">Products <span>›</span></a>
   <a href="#testimonials" onclick="closeNav()">Gallery <span>›</span></a>
-  <a href="#kisaan-fayde" onclick="closeNav()">किसान फायदे <span>›</span></a>
+  <a href="#services" onclick="closeNav()">Services <span>›</span></a>
   <a href="#contact" onclick="closeNav()">Contact Us <span>›</span></a>
   <div class="mobile-nav-cta">
     <a href="tel:8826880719" class="btn-primary" onclick="closeNav()">
@@ -884,7 +930,7 @@ footer{background:linear-gradient(135deg,#0a1a0e,#0d2d5e);color:#fff;padding:60p
 
   <div class="hero-inner">
     <div class="hero-left">
-      <p class="hero-tagline">🌾 Smart Solutions for Smart Farmers</p>
+      <p class="hero-tagline"></p>
       <h1>GSM<span>MOBILE STARTER</span></h1>
       <p class="hero-hindi">अब मोटर कंट्रोल करें अपने मोबाइल से</p>
       <p style="font-size:13px;color:rgba(255,255,255,.5);margin-bottom:18px;letter-spacing:1px">स्मार्ट टेक्नोलॉजी – स्मार्ट सिंचाई – स्मार्ट भविष्य</p>
@@ -1059,7 +1105,7 @@ footer{background:linear-gradient(135deg,#0a1a0e,#0d2d5e);color:#fff;padding:60p
       </button>
     </div>
     <div class="about-right reveal">
-      <img src="images/Banner.png" alt="Banner - Principle Industries" loading="lazy" style="cursor:pointer" onclick="openLightbox(this.src)"/>
+      <img src="images/Aboutus Image.png" alt="About Principle Industries" loading="lazy" style="cursor:pointer" onclick="openLightbox(this.src)"/>
       <div class="about-img-overlay">
         <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
         <p>10+ वर्षों का अनुभव • विश्वसनीय तकनीक • सर्वश्रेष्ठ सेवा</p>
@@ -1083,8 +1129,8 @@ footer{background:linear-gradient(135deg,#0a1a0e,#0d2d5e);color:#fff;padding:60p
       <!-- Company Overview -->
       <div class="modal-section">
         <div class="modal-section-title">हमारे बारे में</div>
-        <p>Principle Industries भारतीय किसानों की ज़रूरतों को ध्यान में रखकर स्थापित एक अग्रणी कृषि-तकनीक कंपनी है। हम GSM मोबाइल स्टार्टर, स्मार्ट इरिगेशन सिस्टम और सेंसर-बेस्ड ऑटोमेशन समाधान प्रदान करते हैं — जो खेती को आसान, सस्ता और ज़्यादा उत्पादक बनाते हैं।</p>
-        <p>हमारा मुख्यालय नई दिल्ली में स्थित है और हम 15+ राज्यों में किसानों की सेवा कर रहे हैं। हमारी टीम में इलेक्ट्रॉनिक्स, एग्री-टेक और किसान-सेवा के विशेषज्ञ शामिल हैं।</p>
+        <p>Principle Industries, स्थापित 2018 में, भारतीय किसानों की ज़रूरतों को ध्यान में रखकर एक अग्रणी कृषि-तकनीक कंपनी है। हम GSM मोबाइल स्टार्टर, स्मार्ट इरिगेशन सिस्टम और सेंसर-बेस्ड ऑटोमेशन समाधान प्रदान करते हैं — जो खेती को आसान, सस्ता और ज़्यादा उत्पादक बनाते हैं।</p>
+        <p>हमारा मुख्यालय नई दिल्ली में स्थित है और हम 4+ राज्यों में किसानों की सेवा कर रहे हैं। हमारी टीम में इलेक्ट्रॉनिक्स, एग्री-टेक और किसान-सेवा के विशेषज्ञ शामिल हैं।</p>
       </div>
 
       <!-- Mission & Vision -->
@@ -1127,7 +1173,7 @@ footer{background:linear-gradient(135deg,#0a1a0e,#0d2d5e);color:#fff;padding:60p
             <div class="exp-stat-label">डिवाइस इंस्टॉल</div>
           </div>
           <div class="exp-stat">
-            <div class="exp-stat-num">15+</div>
+            <div class="exp-stat-num">4+</div>
             <div class="exp-stat-label">राज्यों में सेवा</div>
           </div>
         </div>
@@ -1173,8 +1219,8 @@ footer{background:linear-gradient(135deg,#0a1a0e,#0d2d5e);color:#fff;padding:60p
             <div class="journey-year">2024</div>
             <div class="journey-dot"></div>
             <div class="journey-text">
-              <h4>15 राज्यों में विस्तार</h4>
-              <p>आज हम 15+ राज्यों में 5000+ किसानों की सेवा कर रहे हैं और हर दिन बढ़ते जा रहे हैं।</p>
+              <h4>4 राज्यों में विस्तार</h4>
+              <p>आज हम 4+ राज्यों में 5000+ किसानों की सेवा कर रहे हैं और हर दिन बढ़ते जा रहे हैं।</p>
             </div>
           </div>
         </div>
@@ -1190,198 +1236,120 @@ footer{background:linear-gradient(135deg,#0a1a0e,#0d2d5e);color:#fff;padding:60p
   <div class="products-inner">
 
     <div class="section-header reveal">
-      <div class="section-title">हमारे प्रोडक्ट्स</div>
+      <div class="section-title">Our Products</div>
       <div class="section-line"></div>
     </div>
 
-    <div class="tinder-products-wrapper">
+    <div class="products-carousel">
+      <div class="products-grid reveal" id="productsCarousel">
 
-      <div class="tinder-stack" id="tinderStack">
-
-        <!-- CARD 1 -->
-        <div class="tinder-card">
-
-          <div class="tinder-img">
-            <img src="images/Auto Swich 1.png" alt="">
-            <span class="product-badge">Smart Control</span>
-          </div>
-
-          <div class="tinder-content">
-            <h3>Auto Switch</h3>
-
-            <p>
-              स्वचालित कंट्रोल के साथ सुरक्षित संचालन
-            </p>
-
-            <ul>
-              <li>ऑटो चालू/बंद</li>
-              <li>कम मेंटेनेंस</li>
-              <li>किसान उपयोग हेतु</li>
-            </ul>
-
-            <a href="https://wa.me/918826880719" class="product-btn">
-              Enquire Now
-            </a>
-          </div>
-
+      <article class="product-card-item">
+        <div class="product-card-img">
+          <img src="images/Auto Swich 1.png" alt="Auto Switch">
+          <span class="product-tag">Smart Control</span>
         </div>
-
-        <!-- CARD 2 -->
-        <div class="tinder-card">
-
-          <div class="tinder-img">
-            <img src="images/Float Switch WLC.png" alt="">
-            <span class="product-badge">Water Control</span>
-          </div>
-
-          <div class="tinder-content">
-            <h3>Float Switch</h3>
-
-            <p>
-              पानी लेवल के हिसाब से मोटर कंट्रोल
-            </p>
-
-            <ul>
-              <li>ड्राई रन सुरक्षा</li>
-              <li>ऑटो लेवल कंट्रोल</li>
-              <li>विश्वसनीय सिस्टम</li>
-            </ul>
-
-            <a href="https://wa.me/918826880719" class="product-btn">
-              Enquire Now
-            </a>
-          </div>
-
+        <div class="product-card-body">
+          <h3>Auto Switch</h3>
+          <p>स्वचालित कंट्रोल के साथ सुरक्षित संचालन</p>
+          <ul class="product-features">
+            <li>ऑटो चालू/बंद</li>
+            <li>कम मेंटेनेंस</li>
+            <li>किसान उपयोग हेतु</li>
+          </ul>
+          <a href="https://wa.me/918826880719" class="btn-enquire">Enquire Now</a>
         </div>
+      </article>
 
-        <!-- CARD 3 -->
-        <div class="tinder-card">
-
-          <div class="tinder-img">
-            <img src="images/GSM Mobile Starters.png" alt="">
-            <span class="product-badge">Best Seller</span>
-          </div>
-
-          <div class="tinder-content">
-            <h3>GSM Mobile Starter</h3>
-
-            <p>
-              मोबाइल से कहीं भी मोटर चालू/बंद करें
-            </p>
-
-            <ul>
-              <li>SMS कंट्रोल</li>
-              <li>मिस कॉल अलर्ट</li>
-              <li>वोल्टेज सुरक्षा</li>
-            </ul>
-
-            <a href="https://wa.me/918826880719" class="product-btn">
-              Enquire Now
-            </a>
-          </div>
-
+      <article class="product-card-item">
+        <div class="product-card-img">
+          <img src="images/Float Switch WLC.png" alt="Float Switch">
+          <span class="product-tag">Water Control</span>
         </div>
-
-        <!-- CARD 4 -->
-        <div class="tinder-card">
-
-          <div class="tinder-img">
-            <img src="images/Safety Items 3.png" alt="">
-            <span class="product-badge">Protection</span>
-          </div>
-
-          <div class="tinder-content">
-            <h3>Safety Items</h3>
-
-            <p>
-              मोटर और सिस्टम के लिए सुरक्षा समाधान
-            </p>
-
-            <ul>
-              <li>ओवरलोड सुरक्षा</li>
-              <li>ओवरकरंट सुरक्षा</li>
-              <li>सुरक्षित सिस्टम</li>
-            </ul>
-
-            <a href="https://wa.me/918826880719" class="product-btn">
-              Enquire Now
-            </a>
-          </div>
-
+        <div class="product-card-body">
+          <h3>Float Switch</h3>
+          <p>पानी लेवल के हिसाब से मोटर कंट्रोल</p>
+          <ul class="product-features">
+            <li>ड्राई रन सुरक्षा</li>
+            <li>ऑटो लेवल कंट्रोल</li>
+            <li>विश्वसनीय सिस्टम</li>
+          </ul>
+          <a href="https://wa.me/918826880719" class="btn-enquire">Enquire Now</a>
         </div>
+      </article>
 
-        <!-- CARD 5 -->
-        <div class="tinder-card">
-
-          <div class="tinder-img">
-            <img src="images/Smart Irrigation System 2.png" alt="">
-            <span class="product-badge">Popular</span>
-          </div>
-
-          <div class="tinder-content">
-            <h3>Smart Irrigation</h3>
-
-            <p>
-              स्मार्ट सिंचाई और पानी की बचत
-            </p>
-
-            <ul>
-              <li>ऑटो कंट्रोल</li>
-              <li>स्मार्ट मॉनिटरिंग</li>
-              <li>पानी की बचत</li>
-            </ul>
-
-            <a href="https://wa.me/918826880719" class="product-btn">
-              Enquire Now
-            </a>
-          </div>
-
+      <article class="product-card-item">
+        <div class="product-card-img">
+          <img src="images/GSM Mobile Starters.png" alt="GSM Mobile Starter">
+          <span class="product-tag">Best Seller</span>
         </div>
-
-        <!-- CARD 6 -->
-        <div class="tinder-card">
-
-          <div class="tinder-img">
-            <img src="images/Smart Solar Camera.png" alt="">
-            <span class="product-badge">Security</span>
-          </div>
-
-          <div class="tinder-content">
-            <h3>Solar Camera</h3>
-
-            <p>
-              स्मार्ट फार्म निगरानी कैमरा
-            </p>
-
-            <ul>
-              <li>24x7 निगरानी</li>
-              <li>सोलर सपोर्ट</li>
-              <li>आसान इंस्टॉलेशन</li>
-            </ul>
-
-            <a href="https://wa.me/918826880719" class="product-btn">
-              Enquire Now
-            </a>
-          </div>
-
+        <div class="product-card-body">
+          <h3>GSM Mobile Starter</h3>
+          <p>मोबाइल से कहीं भी मोटर चालू/बंद करें</p>
+          <ul class="product-features">
+            <li>SMS कंट्रोल</li>
+            <li>मिस कॉल अलर्ट</li>
+            <li>वोल्टेज सुरक्षा</li>
+          </ul>
+          <a href="https://wa.me/918826880719" class="btn-enquire">Enquire Now</a>
         </div>
+      </article>
+
+      <article class="product-card-item">
+        <div class="product-card-img">
+          <img src="images/Safety Items 3.png" alt="Safety Items">
+          <span class="product-tag">Protection</span>
+        </div>
+        <div class="product-card-body">
+          <h3>Safety Items</h3>
+          <p>मोटर और सिस्टम के लिए सुरक्षा समाधान</p>
+          <ul class="product-features">
+            <li>ओवरलोड सुरक्षा</li>
+            <li>ओवरकरंट सुरक्षा</li>
+            <li>सुरक्षित सिस्टम</li>
+          </ul>
+          <a href="https://wa.me/918826880719" class="btn-enquire">Enquire Now</a>
+        </div>
+      </article>
+
+      <article class="product-card-item">
+        <div class="product-card-img">
+          <img src="images/Smart Irrigation System 2.png" alt="Smart Irrigation">
+          <span class="product-tag">Popular</span>
+        </div>
+        <div class="product-card-body">
+          <h3>Smart Irrigation</h3>
+          <p>स्मार्ट सिंचाई और पानी की बचत</p>
+          <ul class="product-features">
+            <li>ऑटो कंट्रोल</li>
+            <li>स्मार्ट मॉनिटरिंग</li>
+            <li>पानी की बचत</li>
+          </ul>
+          <a href="https://wa.me/918826880719" class="btn-enquire">Enquire Now</a>
+        </div>
+      </article>
+
+      <article class="product-card-item">
+        <div class="product-card-img">
+          <img src="images/Smart Solar Camera.png" alt="Solar Camera">
+          <span class="product-tag">Security</span>
+        </div>
+        <div class="product-card-body">
+          <h3>Solar Camera</h3>
+          <p>स्मार्ट फार्म निगरानी कैमरा</p>
+          <ul class="product-features">
+            <li>24x7 निगरानी</li>
+            <li>सोलर सपोर्ट</li>
+            <li>आसान इंस्टॉलेशन</li>
+          </ul>
+          <a href="https://wa.me/918826880719" class="btn-enquire">Enquire Now</a>
+        </div>
+      </article>
 
       </div>
-
-      <!-- BUTTONS -->
-      <div class="swipe-buttons">
-
-        <button id="swipeLeft" class="nav-btn">
-          ← 
-        </button>
-
-
-        <button id="swipeRight" class="nav-btn next-btn">
-          →  
-        </button>
-
+      <div class="products-controls">
+        <button class="carousel-btn prev" type="button" aria-label="Scroll left">←</button>
+        <button class="carousel-btn next" type="button" aria-label="Scroll right">→</button>
       </div>
-
     </div>
 
   </div>
@@ -1400,7 +1368,7 @@ footer{background:linear-gradient(135deg,#0a1a0e,#0d2d5e);color:#fff;padding:60p
       <div class="stat-label">डेवाइस इंस्टॉल</div>
     </div>
     <div class="stat-item reveal">
-      <div><span class="stat-number" data-target="15">0</span><span class="stat-suffix">+</span></div>
+      <div><span class="stat-number" data-target="4">0</span><span class="stat-suffix">+</span></div>
       <div class="stat-label">राज्यों में उपलब्ध</div>
     </div>
     <div class="stat-item reveal">
@@ -1414,7 +1382,7 @@ footer{background:linear-gradient(135deg,#0a1a0e,#0d2d5e);color:#fff;padding:60p
 <section class="testimonials" id="testimonials">
   <div class="testimonials-inner">
     <div class="section-header reveal">
-      <div class="section-title">किसानों की राय</div>
+      <div class="section-title">Gallery</div>
       <div class="section-line"></div>
     </div>
     <div class="testimonials-grid">
@@ -1471,14 +1439,26 @@ footer{background:linear-gradient(135deg,#0a1a0e,#0d2d5e);color:#fff;padding:60p
       <div class="section-title-hindi">देखें कैसे मोबाइल से मोटर कंट्रोल करें</div>
       <div class="section-line"></div>
     </div>
-    <div class="video-thumb reveal" onclick="openVideo()">
-      <img src="https://img.youtube.com/vi/kGH18PraTCU/hqdefault.jpg" alt="Video Demo" loading="lazy"/>
-      <div class="video-thumb-overlay">
-        <div class="play-btn">
-          <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+    <div class="video-row">
+      <div class="video-thumb reveal" onclick="openVideo('kGH18PraTCU')">
+        <img src="https://img.youtube.com/vi/kGH18PraTCU/hqdefault.jpg" alt="Video Demo" loading="lazy"/>
+        <div class="video-thumb-overlay">
+          <div class="play-btn">
+            <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          </div>
+          <div class="video-label">मिस कॉल से मोटर चालू करें - Live Demo</div>
+          <span class="live-badge">LIVE DEMO</span>
         </div>
-        <div class="video-label">मिस कॉल से मोटर चालू करें - Live Demo</div>
-        <span class="live-badge">LIVE DEMO</span>
+      </div>
+
+      <div class="video-thumb reveal" onclick="openVideo('yC8ysx_W6YQ')">
+        <img src="https://img.youtube.com/vi/yC8ysx_W6YQ/hqdefault.jpg" alt="Video Demo 2" loading="lazy"/>
+        <div class="video-thumb-overlay">
+          <div class="play-btn">
+            <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          </div>
+          <div class="video-label">GSM मोबाइल स्टार्टर - Demo</div>
+        </div>
       </div>
     </div>
     <div id="videoLightbox" class="lightbox-overlay" role="dialog" aria-hidden="true">
@@ -1489,11 +1469,12 @@ footer{background:linear-gradient(135deg,#0a1a0e,#0d2d5e);color:#fff;padding:60p
     </div>
 
     <script>
-    function openVideo(){
+    function openVideo(id){
       var lb=document.getElementById('videoLightbox');
       lb.classList.add('active');
       lb.setAttribute('aria-hidden','false');
-      document.getElementById('videoFrame').src='https://www.youtube.com/embed/kGH18PraTCU?autoplay=1';
+      var frame=document.getElementById('videoFrame');
+      frame.src='https://www.youtube.com/embed/'+id+'?autoplay=1';
     }
     function closeVideo(){
       var lb=document.getElementById('videoLightbox');
@@ -1507,73 +1488,17 @@ footer{background:linear-gradient(135deg,#0a1a0e,#0d2d5e);color:#fff;padding:60p
 </section>
 
 <!-- ==========================================
-     KISAAN KE FAYDE (replaces FAQ)
+     SERVICES SECTION (IMAGE ROW)
      ========================================== -->
-<section class="kisaan-fayde" id="kisaan-fayde">
+<section class="kisaan-fayde" id="services">
   <div class="kisaan-inner">
     <div class="section-header reveal">
-      <div class="section-title">किसान के फायदे 🌾</div>
-      <div class="section-title-hindi">GSM मोबाइल स्टार्टर से जीवन बदलें</div>
+      <div class="section-title">Services</div>
       <div class="section-line"></div>
     </div>
-    <div class="benefits-grid">
-
-      <div class="benefit-card reveal">
-        <div class="benefit-icon">
-          <svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
-        </div>
-        <h3>खेत जाने की ज़रूरत नहीं</h3>
-        <p>अब आप घर बैठे, बाज़ार से, या कहीं से भी अपने मोबाइल से मोटर चालू या बंद कर सकते हैं। रात को उठकर खेत जाने के झंझट से मुक्ति।</p>
-        <div class="benefit-highlight">समय की बचत — हर दिन 2-3 घंटे</div>
-      </div>
-
-      <div class="benefit-card reveal">
-        <div class="benefit-icon">
-          <svg viewBox="0 0 24 24"><polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
-        </div>
-        <h3>बिजली की भारी बचत</h3>
-        <p>टाइमर और ऑटो-कट फीचर से मोटर ज़रूरत पड़ने पर ही चलती है। बेकार में चलती मोटर से होने वाले बिजली बिल में 30-40% तक की बचत।</p>
-        <div class="benefit-highlight">बिजली बिल में 30-40% बचत</div>
-      </div>
-
-      <div class="benefit-card reveal">
-        <div class="benefit-icon">
-          <svg viewBox="0 0 24 24"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>
-        </div>
-        <h3>पानी की बचत</h3>
-        <p>ड्राई रन प्रोटेक्शन और ऑटो-स्टॉप फीचर से टंकी या खेत भरने पर मोटर खुद बंद हो जाती है — पानी की बर्बादी बिल्कुल नहीं।</p>
-        <div class="benefit-highlight">पानी की 25-35% बचत</div>
-      </div>
-
-      <div class="benefit-card reveal">
-        <div class="benefit-icon">
-          <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-        </div>
-        <h3>मोटर की लंबी उम्र</h3>
-        <p>वोल्टेज प्रोटेक्शन, ओवरलोड प्रोटेक्शन और ड्राई रन प्रोटेक्शन से मोटर को नुकसान नहीं होता। मोटर 2-3 गुना ज़्यादा चलती है।</p>
-        <div class="benefit-highlight">मोटर की उम्र 2x बढ़ती है</div>
-      </div>
-
-      <div class="benefit-card reveal">
-        <div class="benefit-icon">
-          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-        </div>
-        <h3>24 घंटे SMS अलर्ट</h3>
-        <p>मोटर चालू हुई, बंद हुई, बिजली गई, वोल्टेज कम हुआ — हर घटना की जानकारी तुरंत SMS पर मिलती है। हर पल खेत से जुड़े रहें।</p>
-        <div class="benefit-highlight">रियल-टाइम SMS नोटिफिकेशन</div>
-      </div>
-
-      <div class="benefit-card reveal">
-        <div class="benefit-icon">
-          <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-        </div>
-        <h3>पूरा परिवार चला सकता है</h3>
-        <p>एक से ज़्यादा मोबाइल नंबर रजिस्टर करें — पत्नी, बेटा, भाई कोई भी मोटर कंट्रोल कर सकता है। सिंपल मिस कॉल — बस!</p>
-        <div class="benefit-highlight">5 तक अधिकृत नंबर जोड़ें</div>
-      </div>
-
-      
-
+    <div class="services-row reveal">
+      <div class="service-img"><img src="images/services1.png" alt="Services 1" loading="lazy"/></div>
+      <div class="service-img"><img src="images/services2.png" alt="Services 2" loading="lazy"/></div>
     </div>
   </div>
 </section>
@@ -1584,11 +1509,11 @@ footer{background:linear-gradient(135deg,#0a1a0e,#0d2d5e);color:#fff;padding:60p
 <section class="certifications" id="certifications">
   <div class="cert-inner">
     <div class="section-header reveal">
-      <div class="section-title">हमारे प्रमाण-पत्र</div>
-      <div class="section-title-hindi">विश्वसनीयता और गुणवत्ता की गारंटी</div>
+      <div class="section-title">Our Certifications</div>
+      <div class="section-title-hindi">Guarantee of Reliability and Quality</div>
       <div class="section-line"></div>
     </div>
-    <p class="cert-subtitle reveal">हमारे प्रोडक्ट्स राष्ट्रीय और अंतर्राष्ट्रीय मानकों के अनुसार प्रमाणित हैं</p>
+    <p class="cert-subtitle reveal">Our products are certified according to national and international standards</p>
 
     <div class="cert-grid">
 
@@ -1715,10 +1640,10 @@ footer{background:linear-gradient(135deg,#0a1a0e,#0d2d5e);color:#fff;padding:60p
   <div class="footer-inner">
     <div class="footer-brand">
       <div class="logo" style="margin-bottom:12px;display:flex;align-items:center;gap:12px;">
-        <img src="images/logo.png" alt="Principle Industries Logo" style="height:60px;width:auto;object-fit:contain;">
+<img src="images/sidhhant.png" alt="Principle Industries Logo" style="height:70px;width:auto;object-fit:contain;">
         <div>
           <div class="footer-brand-name"></div>
-          <div class="footer-brand-tag">Smart Solutions for Smart Farmers</div>
+          <div class="footer-brand-tag"></div>
         </div>
       </div>
       <p>Principle Industries किसानों के लिए स्मार्ट और भरोसेमंद ऑटोमेशन समाधान प्रदान करता है। हमारा लक्ष्य – खेती को आसान बनाना।</p>
@@ -1741,7 +1666,7 @@ footer{background:linear-gradient(135deg,#0a1a0e,#0d2d5e);color:#fff;padding:60p
         <li><a href="#about">› About Us</a></li>
         <li><a href="#products">› Products</a></li>
         <li><a href="#testimonials">› Gallery</a></li>
-        <li><a href="#kisaan-fayde">› किसान फायदे</a></li>
+        <li><a href="#services">› Services</a></li>
         <li><a href="#certifications">› Certifications</a></li>
         <li><a href="#contact">› Contact Us</a></li>
       </ul>
@@ -1933,56 +1858,56 @@ function submitForm(){
 
 const stack = document.getElementById('tinderStack');
 
-function initCards(){
+if (stack) {
+  function initCards(){
+    const cards = document.querySelectorAll('.tinder-card');
+    cards.forEach((card,index)=>{
+      card.style.zIndex = cards.length - index;
+      card.style.transform =
+        `scale(${1 - index * 0.04}) translateY(${index * 12}px)`;
+    });
+  }
 
-  const cards = document.querySelectorAll('.tinder-card');
+  initCards();
 
-  cards.forEach((card,index)=>{
+  function swipe(direction){
+    const cards = document.querySelectorAll('.tinder-card');
+    const topCard = cards[0];
+    if(!topCard) return;
 
-    card.style.zIndex = cards.length - index;
+    topCard.classList.add(direction === 'left' ? 'swipe-left' : 'swipe-right');
 
-    card.style.transform =
-      `scale(${1 - index * 0.04})
-       translateY(${index * 12}px)`;
+    setTimeout(()=>{
+      stack.appendChild(topCard);
+      topCard.classList.remove('swipe-left','swipe-right');
+      initCards();
+    },500);
+  }
 
-  });
+  const swipeLeft = document.getElementById('swipeLeft');
+  const swipeRight = document.getElementById('swipeRight');
 
+  if (swipeLeft) swipeLeft.addEventListener('click',()=>swipe('left'));
+  if (swipeRight) swipeRight.addEventListener('click',()=>swipe('right'));
 }
 
-initCards();
+const productCarousel = document.getElementById('productsCarousel');
+const prevProductBtn = document.querySelector('.carousel-btn.prev');
+const nextProductBtn = document.querySelector('.carousel-btn.next');
+const productScrollStep = 340;
 
-function swipe(direction){
-
-  const cards = document.querySelectorAll('.tinder-card');
-
-  const topCard = cards[0];
-
-  if(!topCard) return;
-
-  topCard.classList.add(direction === 'left'
-    ? 'swipe-left'
-    : 'swipe-right');
-
-  setTimeout(()=>{
-
-    stack.appendChild(topCard);
-
-    topCard.classList.remove(
-      'swipe-left',
-      'swipe-right'
-    );
-
-    initCards();
-
-  },500);
-
+if (productCarousel) {
+  if (prevProductBtn) {
+    prevProductBtn.addEventListener('click', ()=>{
+      productCarousel.scrollBy({left:-productScrollStep, behavior:'smooth'});
+    });
+  }
+  if (nextProductBtn) {
+    nextProductBtn.addEventListener('click', ()=>{
+      productCarousel.scrollBy({left:productScrollStep, behavior:'smooth'});
+    });
+  }
 }
-
-document.getElementById('swipeLeft')
-.addEventListener('click',()=>swipe('left'));
-
-document.getElementById('swipeRight')
-.addEventListener('click',()=>swipe('right'));
 
 </script>
 </body>
