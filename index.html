@@ -867,7 +867,188 @@ footer{background:linear-gradient(135deg,#0a1a0e,#0d2d5e);color:#fff;padding:60p
   }
 
 }
+/* =========================================
+   HERO SLIDER
+========================================= */
+
+.hero-slider-section{
+  width:100%;
+  position:relative;
+  overflow:hidden;
+}
+
+.heroSwiper{
+  width:100%;
+  height:92vh;
+}
+
+.swiper-slide{
+  position:relative;
+  width:100%;
+  height:100%;
+}
+
+.swiper-slide picture,
+.swiper-slide img{
+  width:100%;
+  height:100%;
+  display:block;
+}
+
+.swiper-slide img{
+  object-fit:cover;
+}
+
+.hero-overlay-content{
+  position:absolute;
+  inset:0;
+  background:linear-gradient(
+    90deg,
+    rgba(0,0,0,.55) 0%,
+    rgba(0,0,0,.30) 35%,
+    rgba(0,0,0,.10) 100%
+  );
+
+  display:flex;
+  align-items:center;
+  z-index:2;
+}
+
+.hero-content-box{
+  max-width:1200px;
+  width:100%;
+  margin:auto;
+  padding:0 80px;
+  color:#fff;
+}
+
+.hero-tag{
+  display:inline-block;
+  background:#1a7c3e;
+  padding:8px 18px;
+  border-radius:30px;
+  font-size:14px;
+  font-weight:700;
+  margin-bottom:20px;
+}
+
+.hero-content-box h1{
+  font-size:68px;
+  line-height:1.1;
+  font-weight:800;
+  margin-bottom:18px;
+  max-width:650px;
+}
+
+.hero-content-box p{
+  font-size:21px;
+  line-height:1.7;
+  max-width:650px;
+  margin-bottom:35px;
+}
+
+.hero-btns-wrap{
+  display:flex;
+  gap:16px;
+  flex-wrap:wrap;
+}
+
+.hero-btn{
+  padding:15px 28px;
+  border-radius:10px;
+  text-decoration:none;
+  font-weight:700;
+  transition:.3s;
+}
+
+.hero-call-btn{
+  background:#1a7c3e;
+  color:#fff;
+}
+
+.hero-call-btn:hover{
+  background:#0f5229;
+}
+
+.hero-wa-btn{
+  background:#25d366;
+  color:#fff;
+}
+
+.hero-wa-btn:hover{
+  background:#18b956;
+}
+
+.swiper-pagination-bullet{
+  background:#fff !important;
+  opacity:.6;
+}
+
+.swiper-pagination-bullet-active{
+  background:#25d366 !important;
+  opacity:1;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:768px){
+
+  .heroSwiper{
+    height:88vh;
+  }
+
+  .hero-overlay-content{
+    align-items:flex-end;
+    padding-bottom:100px;
+    background:linear-gradient(
+      180deg,
+      rgba(0,0,0,.15) 0%,
+      rgba(0,0,0,.35) 40%,
+      rgba(0,0,0,.78) 100%
+    );
+  }
+
+  .hero-content-box{
+    padding:0 22px;
+  }
+
+  .hero-tag{
+    font-size:11px;
+    padding:6px 14px;
+    margin-bottom:14px;
+  }
+
+  .hero-content-box h1{
+    font-size:34px;
+    line-height:1.2;
+    margin-bottom:14px;
+  }
+
+  .hero-content-box p{
+    font-size:15px;
+    line-height:1.6;
+    margin-bottom:24px;
+  }
+
+  .hero-btns-wrap{
+    gap:10px;
+  }
+
+  .hero-btn{
+    flex:1;
+    text-align:center;
+    padding:13px 10px;
+    font-size:14px;
+  }
+
+}
 </style>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
 </head>
 <body>
 
@@ -947,63 +1128,78 @@ footer{background:linear-gradient(135deg,#0a1a0e,#0d2d5e);color:#fff;padding:60p
 </div>
 
 <!-- HERO -->
-<section class="hero" id="hero">
-  <div class="hero-bg"></div>
+<!-- HERO SLIDER -->
+<section class="hero-slider-section" id="hero">
 
-  <a class="hero-header-click" href="#about" onclick="openAboutModal();return false;" aria-label="Open Principle Industries details" title="Click to view Principle Industries">
-    <span class="hero-header-click-text">Click for more</span>
-  </a>
-  <div class="hero-overlay"></div>
+  <div class="swiper heroSwiper">
 
+    <div class="swiper-wrapper">
 
-  <div class="hero-inner">
-    <div class="hero-left">
-      <p class="hero-tagline"></p>
-      <h1>GSM<span>MOBILE STARTER</span></h1>
-      <p class="hero-hindi">अब मोटर कंट्रोल करें अपने मोबाइल से</p>
-      <p style="font-size:13px;color:rgba(255,255,255,.5);margin-bottom:18px;letter-spacing:1px">स्मार्ट टेक्नोलॉजी – स्मार्ट सिंचाई – स्मार्ट भविष्य</p>
-      <div class="hero-badges">
-        <div class="badge">कॉल करें</div>
-        <div class="badge">SMS भेजें</div>
-        <div class="badge">मोटर चालू/बंद करें</div>
+      <!-- SLIDE 1 -->
+      <div class="swiper-slide">
+
+        <picture>
+          <source media="(max-width:768px)" srcset="images/banners/mobile-1.webp">
+          <img src="images/banners/desktop-1.webp" alt="GSM Mobile Starter">
+        </picture>
+
+        <div class="hero-overlay-content"></div>
+
       </div>
-      <ul class="hero-bullets">
-        <li>खेत जाने की जरूरत नहीं</li>
-        <li>बिजली और पानी की बचत</li>
-        <li>सुरक्षित और स्मार्ट सिस्टम</li>
-        <li>सभी प्रकार की मोटर के लिए उपयुक्त</li>
-        <li>1 साल की वारंटी के साथ</li>
-      </ul>
-      <div class="hero-btns">
-        <a href="tel:8826880719" class="btn-primary">
-          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.63 3.52 2 2 0 0 1 3.6 1.37h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l.86-.86a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          Call Now
-        </a>
-        <a href="https://wa.me/918826880719" class="btn-wa">
-          <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.554 4.118 1.524 5.847L.057 23.117a.75.75 0 0 0 .932.932l5.347-1.486A11.946 11.946 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.968 0-3.8-.54-5.368-1.474l-.352-.21-3.655 1.016.983-3.574-.228-.368A9.953 9.953 0 0 1 2 12C2 6.478 6.478 2 12 2s10 4.478 10 10-4.478 10-10 10z"/></svg>
-          Chat on WhatsApp
-        </a>
+
+      <!-- SLIDE 2 -->
+      <div class="swiper-slide">
+
+        <picture>
+          <source media="(max-width:768px)" srcset="images/banners/mobile-2.webp">
+          <img src="images/banners/desktop-2.webp" alt="Smart Farming">
+        </picture>
+
+        <div class="hero-overlay-content"></div>
+
       </div>
-    </div>
-    <div class="hero-right">
-      <div class="product-card">
-        <img class="product-img" src="https://images.unsplash.com/photo-1558346490-a72e53ae2d4f?w=400&q=80" alt="GSM Motor Controller" loading="lazy" onerror="this.style.background='linear-gradient(135deg,#1a7c3e,#0d2d5e)';this.style.width='220px';this.style.height='260px';this.style.display='block';this.style.borderRadius='12px'"/>
-        <div class="warranty-badge">
-          <strong>1 साल</strong>
-          की वारंटी
+
+      <!-- SLIDE 3 -->
+      <div class="swiper-slide">
+
+        <picture>
+          <source media="(max-width:768px)" srcset="images/banners/mobile-3.webp">
+          <img src="images/banners/desktop-3.webp" alt="Agriculture Automation">
+        </picture>
+
+        <div class="hero-overlay-content"></div>
+
+      </div>
+      <!-- SLIDE 4 -->
+      <div class="swiper-slide">
+
+        <picture>
+          <source media="(max-width:768px)" srcset="images/banners/mobile-4.webp">
+          <img src="images/banners/desktop-4.webp" alt="">
+        </picture>
+
+      </div>
+
+      <!-- SLIDE 5 -->
+      <div class="swiper-slide">
+
+        <picture>
+          <source media="(max-width:768px)" srcset="images/banners/mobile-5.webp">
+          <img src="images/banners/desktop-5.webp" alt="">
+        </picture>
+
         </div>
-      </div>
+
     </div>
 
-    <!-- Carousel controls (mobile) -->
-    <div style="display:flex;justify-content:center;gap:14px;align-items:center;margin-top:22px;position:relative;z-index:2" class="products-controls" id="productsControls">
-      <div id="productsDots" style="display:flex;gap:10px;align-items:center"></div>
-    </div>
+    <!-- PAGINATION -->
+    <div class="swiper-pagination"></div>
 
   </div>
+
 </section>
 
-<!-- FEATURES -->
+<!-- FEATURES -->F
 <section class="features" id="features">
   <div class="section-header reveal">
     <div class="section-title-hindi">हमारे स्मार्ट फीचर्स 🌿</div>
@@ -1728,7 +1924,7 @@ footer{background:linear-gradient(135deg,#0a1a0e,#0d2d5e);color:#fff;padding:60p
           <div class="footer-brand-tag"></div>
         </div>
       </div>
-      <p>Principle Industries किसानों के लिए स्मार्ट और भरोसेमंद ऑटोमेशन समाधान प्रदान करता है। हमारा लक्ष्य – खेती को आसान बनाना।</p>
+      <p>Principle Industries provides smart and reliable automation solutions for farmers. Our goal — to make farming easier.</p>
       <div class="social-icons">
         <a href="https://www.facebook.com/Principleindustries/" class="social-icon" target="_blank">
           <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54v-2.891h2.54V9.845c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.261c-1.243 0-1.63.771-1.63 1.562v1.875h2.773l-.443 2.891h-2.33v6.987C18.343 21.128 22 16.991 22 12z"/></svg>
@@ -2017,6 +2213,27 @@ if (productCarousel) {
   }
 }
 
+</script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+const heroSwiper = new Swiper(".heroSwiper", {
+
+  loop:true,
+
+  speed:1000,
+
+  autoplay:{
+    delay:4000,
+    disableOnInteraction:false,
+  },
+
+  pagination:{
+    el:".swiper-pagination",
+    clickable:true,
+  },
+
+});
 </script>
 </body>
 </html>
