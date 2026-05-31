@@ -1044,6 +1044,207 @@ footer{background:linear-gradient(135deg,#0a1a0e,#0d2d5e);color:#fff;padding:60p
   }
 
 }
+
+/* PRODUCT POPUP */
+
+.product-popup-overlay{
+  position:fixed;
+  inset:0;
+
+  background:rgba(0,0,0,.75);
+
+  z-index:99999;
+
+  display:none;
+  align-items:center;
+  justify-content:center;
+
+  padding:20px;
+}
+
+.product-popup-overlay.active{
+  display:flex;
+}
+
+.product-popup{
+  width:100%;
+  max-width:1100px;
+
+  background:#fff;
+
+  border-radius:24px;
+
+  overflow:hidden;
+
+  display:grid;
+  grid-template-columns:1fr 1fr;
+
+  position:relative;
+
+  animation:popupShow .3s ease;
+}
+
+@keyframes popupShow{
+
+  from{
+    transform:translateY(30px);
+    opacity:0;
+  }
+
+  to{
+    transform:translateY(0);
+    opacity:1;
+  }
+
+}
+
+.popup-close{
+  position:absolute;
+  top:18px;
+  right:18px;
+
+  width:42px;
+  height:42px;
+
+  border:none;
+
+  border-radius:50%;
+
+  background:#f2f2f2;
+
+  font-size:28px;
+
+  cursor:pointer;
+}
+
+.popup-left{
+  background:#f7faf8;
+
+  padding:40px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.popup-left img{
+  width:100%;
+  max-width:350px;
+  object-fit:contain;
+}
+
+.popup-right{
+  padding:50px 40px;
+
+  overflow-y:auto;
+  max-height:90vh;
+}
+
+.popup-tag{
+  display:inline-block;
+
+  background:#1a7c3e;
+  color:#fff;
+
+  padding:7px 16px;
+
+  border-radius:30px;
+
+  font-size:13px;
+  font-weight:700;
+
+  margin-bottom:18px;
+}
+
+.popup-right h2{
+  font-size:38px;
+  color:#0d2d5e;
+
+  margin-bottom:16px;
+}
+
+.popup-right p{
+  font-size:15px;
+  line-height:1.8;
+  color:#555;
+
+  margin-bottom:24px;
+}
+
+#popupProductFeatures{
+  list-style:none;
+
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+
+  margin-bottom:35px;
+}
+
+#popupProductFeatures li{
+  position:relative;
+
+  padding-left:24px;
+
+  font-size:14px;
+}
+
+#popupProductFeatures li::before{
+  content:'✓';
+
+  position:absolute;
+  left:0;
+
+  color:#1a7c3e;
+  font-weight:700;
+}
+
+.purchase-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+
+  background:#25d366;
+  color:#fff;
+
+  padding:16px 30px;
+
+  border-radius:12px;
+
+  text-decoration:none;
+
+  font-weight:700;
+  font-size:16px;
+
+  transition:.3s;
+}
+
+.purchase-btn:hover{
+  background:#18b956;
+  transform:translateY(-2px);
+}
+
+@media(max-width:900px){
+
+  .product-popup{
+    grid-template-columns:1fr;
+  }
+
+  .popup-left{
+    padding:30px;
+  }
+
+  .popup-right{
+    padding:30px 24px;
+  }
+
+  .popup-right h2{
+    font-size:28px;
+  }
+
+}
+
+
 </style>
 <link
   rel="stylesheet"
@@ -1199,7 +1400,7 @@ footer{background:linear-gradient(135deg,#0a1a0e,#0d2d5e);color:#fff;padding:60p
 
 </section>
 
-<!-- FEATURES -->F
+<!-- FEATURES -->
 <section class="features" id="features">
   <div class="section-header reveal">
     <div class="section-title-hindi">हमारे स्मार्ट फीचर्स 🌿</div>
@@ -1250,7 +1451,7 @@ footer{background:linear-gradient(135deg,#0a1a0e,#0d2d5e);color:#fff;padding:60p
 <section class="how-it-works">
   <div class="how-inner">
     <div class="section-header reveal">
-      <div class="section-title-hindi">यह कैसे काम करता है?</div>
+      <div class="section-title-hindi">How It Works</div>
       <div class="section-line"></div>
     </div>
     <div class="steps">
@@ -1714,7 +1915,7 @@ footer{background:linear-gradient(135deg,#0a1a0e,#0d2d5e);color:#fff;padding:60p
 <section class="video-section">
   <div class="video-inner">
     <div class="section-header reveal">
-      <div class="section-title-hindi">देखें कैसे मोबाइल से मोटर कंट्रोल करें</div>
+      <div class="section-title-hindi">Live Demo</div>
       <div class="section-line"></div>
     </div>
     <div class="video-row">
@@ -1798,13 +1999,13 @@ footer{background:linear-gradient(135deg,#0a1a0e,#0d2d5e);color:#fff;padding:60p
       <div class="cert-card reveal">
         <div class="cert-badge gold">🏆</div>
         <h4>ISO Certified</h4>
-        <p>ISO मानकों के अनुसार प्रमाणित — गुणवत्ता और प्रोसेस की पूरी गारंटी</p>
+        <p>Certified according to ISO standards — complete assurance of quality and processes.</p>
       </div>
 
       <div class="cert-card reveal">
         <div class="cert-badge green">✅</div>
         <h4>MSME Registered</h4>
-        <p>MSME के तहत पंजीकृत — विश्वसनीय निर्माण और नियमित गुणवत्ता नियंत्रण</p>
+        <p>Registered under MSME — reliable manufacturing and regular quality control.</p>
       </div>
 
     </div>
@@ -1812,8 +2013,8 @@ footer{background:linear-gradient(135deg,#0a1a0e,#0d2d5e);color:#fff;padding:60p
     <!-- Trust Strip -->
     <div class="cert-strip reveal">
       <div class="cert-strip-text">
-        <h3>भरोसेमंद ब्रांड — 8 साल से</h3>
-        <p>हज़ारों किसानों का विश्वास, प्रमाणित तकनीक और बेमिसाल सेवा</p>
+        <h3>Trusted brand — serving for over 8 years</h3>
+        <p>Trusted by thousands of farmers, backed by certified technology and unmatched service.</p>
       </div>
       <div class="cert-strip-logos">
         <div class="cert-logo-pill">ISO Certified</div>
@@ -1828,8 +2029,8 @@ footer{background:linear-gradient(135deg,#0a1a0e,#0d2d5e);color:#fff;padding:60p
 <section class="contact" id="contact">
   <div class="contact-inner">
     <div class="contact-info reveal">
-      <h2>संपर्क करें</h2>
-      <p class="sub">हम यहाँ आपकी मदद के लिए हैं</p>
+      <h2>Contact Us</h2>
+      <p class="sub">We are here to help you</p>
       <div class="contact-items">
         <div class="contact-item">
           <div class="contact-item-icon">
@@ -1861,28 +2062,28 @@ footer{background:linear-gradient(135deg,#0a1a0e,#0d2d5e);color:#fff;padding:60p
       </div>
       <div class="hours-box">
         <h4>Working Hours</h4>
-        <p>सोम - शनि: सुबह 9:00 - शाम 6:00 बजे</p>
+        <p>“Mon - Sat: 9:00 AM - 6:00 PM</p>
       </div>
       <a href="https://wa.me/918826880719" class="contact-wa">
         <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.554 4.118 1.524 5.847L.057 23.117a.75.75 0 0 0 .932.932l5.347-1.486A11.946 11.946 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.968 0-3.8-.54-5.368-1.474l-.352-.21-3.655 1.016.983-3.574-.228-.368A9.953 9.953 0 0 1 2 12C2 6.478 6.478 2 12 2s10 4.478 10 10-4.478 10-10 10z"/></svg>
-        WhatsApp पर संपर्क करें
+        Contact us on WhatsApp
       </a>
       <iframe class="map-embed" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224345.89283480086!2d77.04417826640625!3d28.52725080000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd5b347eb62d%3A0x37205b715389640!2sNew%20Delhi%2C%20Delhi!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" allowfullscreen loading="lazy"></iframe>
     </div>
     <div class="contact-form reveal">
-      <h3>📩 जानकारी भेजें</h3>
+      <h3>📩 Send Information</h3>
       <div class="form-group">
-        <label>आपका नाम</label>
+        <label>Your Name</label>
         <input type="text" placeholder="Your full name"/>
       </div>
       <div class="form-group">
-        <label>मोबाइल नंबर</label>
+        <label>Mobile Number</label>
         <input type="tel" placeholder="Mobile number"/>
       </div>
       <div class="form-group">
         <label>राज्य / State</label>
         <select>
-          <option value="">-- राज्य चुनें --</option>
+          <option value="">-- Choose State --</option>
           <option>Uttar Pradesh</option>
           <option>Rajasthan</option>
           <option>Haryana</option>
@@ -1895,9 +2096,9 @@ footer{background:linear-gradient(135deg,#0a1a0e,#0d2d5e);color:#fff;padding:60p
         </select>
       </div>
       <div class="form-group">
-        <label>प्रोडक्ट</label>
+        <label>Product</label>
         <select>
-          <option value="">-- प्रोडक्ट चुनें --</option>
+          <option value="">-- Choose Product --</option>
           <option>GSM Mobile Starter</option>
           <option>Smart Irrigation System</option>
           <option>Sensor Based System</option>
@@ -1905,10 +2106,10 @@ footer{background:linear-gradient(135deg,#0a1a0e,#0d2d5e);color:#fff;padding:60p
         </select>
       </div>
       <div class="form-group">
-        <label>संदेश</label>
-        <textarea placeholder="अपना सवाल या जानकारी यहाँ लिखें..."></textarea>
+        <label>Message</label>
+        <textarea placeholder="Enter your question or information here..."></textarea>
       </div>
-      <button class="btn-submit" onclick="submitForm()">📤 जानकारी भेजें</button>
+      <button class="btn-submit" onclick="submitForm()">📤 Send Information</button>
     </div>
   </div>
 </section>
@@ -1983,7 +2184,7 @@ footer{background:linear-gradient(135deg,#0a1a0e,#0d2d5e);color:#fff;padding:60p
         <span>Mon-Sat: 9:00 AM – 6:00 PM</span>
       </div>
       <h4 style="margin-top:18px;margin-bottom:10px">Newsletter</h4>
-      <p style="font-size:12px;color:rgba(255,255,255,.5);margin-bottom:8px;font-family:'Tiro Devanagari Hindi',serif">लेटेस्ट अपडेट और ऑफर के लिए हमसे जुड़ें</p>
+      <p style="font-size:12px;color:rgba(255,255,255,.5);margin-bottom:8px;font-family:'Tiro Devanagari Hindi',serif">Connect us to get latest update and offer</p>
       <div class="newsletter-input">
         <input type="email" placeholder="Enter your email"/>
         <button onclick="alert('Thank you for subscribing!')">Subscribe</button>
@@ -2235,5 +2436,240 @@ const heroSwiper = new Swiper(".heroSwiper", {
 
 });
 </script>
+
+<!-- PRODUCT POPUP -->
+
+<div class="product-popup-overlay" id="productPopup">
+
+  <div class="product-popup">
+
+    <button class="popup-close"
+            onclick="closeProductModal()">
+
+      ×
+
+    </button>
+
+    <div class="popup-left">
+
+      <img id="popupProductImage"
+           src=""
+           alt="">
+
+    </div>
+
+    <div class="popup-right">
+
+      <span class="popup-tag">
+        Principle Industries
+      </span>
+
+      <h2 id="popupProductTitle"></h2>
+
+      <p id="popupProductDesc"></p>
+
+      <ul id="popupProductFeatures"></ul>
+
+      <a id="popupWhatsappBtn"
+         href="#"
+         target="_blank"
+         class="purchase-btn">
+
+         Purchase Now on WhatsApp
+
+      </a>
+
+    </div>
+
+  </div>
+
+</div>
+
+<script>
+
+const productData = {
+
+  "auto-switch": {
+
+    title:"Auto Switch",
+
+    image:"images/Auto Swich 1.png",
+
+    desc:"मोटर पंप का चौकीदार जो आटोमेटिक ON करे और सुरक्षा करे।",
+
+    features:[
+      "Automatic Motor ON/OFF",
+      "Dry Run Protection",
+      "Easy Installation",
+      "Low Maintenance",
+      "Reliable Pump Protection",
+      "Smart Water Management"
+    ],
+
+    whatsapp:
+    "https://wa.me/918826880719?text=Hello%20I%20want%20details%20about%20Auto%20Switch"
+
+  },
+
+  "float-switch": {
+
+    title:"Float Switch & WLC",
+
+    image:"images/Float Switch WLC.png",
+
+    desc:"पानी की टंकी भर जाने और खाली हो जाने पर मोटर को ऑन ऑफ करे।",
+
+    features:[
+      "Automatic Water Tank Control",
+      "Dry Run Protection",
+      "Prevents Overflow",
+      "Automatic Motor Operation",
+      "Reliable Water Management"
+    ],
+
+    whatsapp:
+    "https://wa.me/918826880719?text=Hello%20I%20want%20details%20about%20Float%20Switch"
+
+  },
+
+  "gsm-mobile-starter": {
+
+    title:"GSM Mobile Starter",
+
+    image:"images/GSM Mobile Starters.png",
+
+    desc:"खेत की सबमर्सिबल पंप कहीं से कभी भी मोबाइल से चालू और बंद करें।",
+
+    features:[
+      "Mobile ON/OFF Control",
+      "SMS Alerts",
+      "Voltage Protection",
+      "Water Level Monitoring",
+      "Dry Run Protection",
+      "Smart Irrigation System"
+    ],
+
+    whatsapp:
+    "https://wa.me/918826880719?text=Hello%20I%20want%20details%20about%20GSM%20Mobile%20Starter"
+
+  },
+
+  "safety-items": {
+
+    title:"Safety Items",
+
+    image:"images/Safety Items 3.png",
+
+    desc:"सेफ्टी एक्सेसरीज जो आपकी सुरक्षा को सुनिश्चित करे।",
+
+    features:[
+      "Safety Helmet",
+      "Safety Gloves",
+      "Safety Shoes",
+      "Fire Protection",
+      "Electrical Safety",
+      "Industrial Safety"
+    ],
+
+    whatsapp:
+    "https://wa.me/918826880719?text=Hello%20I%20want%20details%20about%20Safety%20Items"
+
+  },
+
+  "smart-irrigation": {
+
+    title:"Smart Irrigation",
+
+    image:"images/Smart Irrigation System 2.png",
+
+    desc:"मिट्टी की नमी के अनुसार ऑटोमैटिक सिंचाई सिस्टम।",
+
+    features:[
+      "Automated Irrigation",
+      "Water Saving",
+      "Mobile Monitoring",
+      "Real-Time Alerts",
+      "Smart Farming",
+      "Easy Installation"
+    ],
+
+    whatsapp:
+    "https://wa.me/918826880719?text=Hello%20I%20want%20details%20about%20Smart%20Irrigation"
+
+  },
+
+  "solar-camera": {
+
+    title:"Solar Camera",
+
+    image:"images/Smart Solar Camera.png",
+
+    desc:"स्मार्ट कैमरा जो आपके खेत की निगरानी करे।",
+
+    features:[
+      "24x7 Monitoring",
+      "Solar Powered",
+      "Night Vision",
+      "Motion Alerts",
+      "Mobile App Access",
+      "Weatherproof Design"
+    ],
+
+    whatsapp:
+    "https://wa.me/918826880719?text=Hello%20I%20want%20details%20about%20Solar%20Camera"
+
+  }
+
+};
+
+function openProductModal(product){
+
+  const data = productData[product];
+
+  document
+    .getElementById("popupProductTitle")
+    .innerText = data.title;
+
+  document
+    .getElementById("popupProductDesc")
+    .innerText = data.desc;
+
+  document
+    .getElementById("popupProductImage")
+    .src = data.image;
+
+  document
+    .getElementById("popupWhatsappBtn")
+    .href = data.whatsapp;
+
+  let featuresHTML = "";
+
+  data.features.forEach(feature => {
+
+    featuresHTML += `<li>${feature}</li>`;
+
+  });
+
+  document
+    .getElementById("popupProductFeatures")
+    .innerHTML = featuresHTML;
+
+  document
+    .getElementById("productPopup")
+    .classList.add("active");
+
+}
+
+function closeProductModal(){
+
+  document
+    .getElementById("productPopup")
+    .classList.remove("active");
+
+}
+
+</script>
+
+
 </body>
 </html>
