@@ -896,7 +896,8 @@ footer{background:linear-gradient(135deg,#0a1a0e,#0d2d5e);color:#fff;padding:60p
 }
 
 .swiper-slide img{
-  object-fit:cover;
+  object-fit:contain;
+  background:#000;
 }
 
 .hero-overlay-content{
@@ -1722,39 +1723,6 @@ footer{background:linear-gradient(135deg,#0a1a0e,#0d2d5e);color:#fff;padding:60p
     <div class="products-carousel">
       <div class="products-grid reveal" id="productsCarousel">
 
-      <article class="product-card-item" data-product-id="auto-switch">
-        <div class="product-card-img">
-          <img src="images/Auto Swich 1.png" alt="Auto Switch">
-          <span class="product-tag">Smart Control</span>
-        </div>
-        <div class="product-card-body">
-          <h3>Auto Switch</h3>
-          <p>Safe operation with automatic control</p>
-          <ul class="product-features">
-            <li>Automatic ON/OFF</li>
-            <li>Low maintenance</li>
-            <li>Designed for farmers’ use</li>
-          </ul>
-          <button class="btn-enquire" type="button" onclick="openProductModal('auto-switch')">Enquire Now</button>
-        </div>
-      </article>
-
-      <article class="product-card-item" data-product-id="float-switch">
-        <div class="product-card-img">
-          <img src="images/Float Switch WLC.png" alt="Float Switch">
-          <span class="product-tag">Water Control</span>
-        </div>
-        <div class="product-card-body">
-          <h3>Float Switch</h3>
-          <p>Water Level Based Motor Control</p>
-          <ul class="product-features">
-            <li>Dry run protection</li>
-            <li>Automatic level control</li>
-            <li>Reliable system</li>
-          </ul>
-          <button class="btn-enquire" type="button" onclick="openProductModal('float-switch')">Enquire Now</button>
-        </div>
-      </article>
 
       <article class="product-card-item" data-product-id="gsm-mobile-starter">
         <div class="product-card-img">
@@ -1773,22 +1741,6 @@ footer{background:linear-gradient(135deg,#0a1a0e,#0d2d5e);color:#fff;padding:60p
         </div>
       </article>
 
-      <article class="product-card-item" data-product-id="safety-items">
-        <div class="product-card-img">
-          <img src="images/Safety Items 3.png" alt="Safety Items">
-          <span class="product-tag">Protection</span>
-        </div>
-        <div class="product-card-body">
-          <h3>Safety Items</h3>
-          <p>Protection for your electrical systems</p>
-          <ul class="product-features">
-            <li>Overload Protection</li>
-            <li>Overcurrent Protection</li>
-            <li>Safe System</li>
-          </ul>
-          <button class="btn-enquire" type="button" onclick="openProductModal('safety-items')">Enquire Now</button>
-        </div>
-      </article>
 
       <article class="product-card-item" data-product-id="smart-irrigation">
         <div class="product-card-img">
@@ -1824,6 +1776,61 @@ footer{background:linear-gradient(135deg,#0a1a0e,#0d2d5e);color:#fff;padding:60p
         </div>
       </article>
 
+
+
+      <article class="product-card-item" data-product-id="auto-switch">
+        <div class="product-card-img">
+          <img src="images/Auto Swich 1.png" alt="Auto Switch">
+          <span class="product-tag">Smart Control</span>
+        </div>
+        <div class="product-card-body">
+          <h3>Auto Switch</h3>
+          <p>Safe operation with automatic control</p>
+          <ul class="product-features">
+            <li>Automatic ON/OFF</li>
+            <li>Low maintenance</li>
+            <li>Designed for farmers’ use</li>
+          </ul>
+          <button class="btn-enquire" type="button" onclick="openProductModal('auto-switch')">Enquire Now</button>
+        </div>
+      </article>
+
+      <article class="product-card-item" data-product-id="float-switch">
+        <div class="product-card-img">
+          <img src="images/Float Switch WLC.png" alt="Float Switch">
+          <span class="product-tag">Water Control</span>
+        </div>
+        <div class="product-card-body">
+          <h3>Float Switch</h3>
+          <p>Water Level Based Motor Control</p>
+          <ul class="product-features">
+            <li>Dry run protection</li>
+            <li>Automatic level control</li>
+            <li>Reliable system</li>
+          </ul>
+          <button class="btn-enquire" type="button" onclick="openProductModal('float-switch')">Enquire Now</button>
+        </div>
+      </article>
+
+      
+      <article class="product-card-item" data-product-id="safety-items">
+        <div class="product-card-img">
+          <img src="images/Safety Items 3.png" alt="Safety Items">
+          <span class="product-tag">Protection</span>
+        </div>
+        <div class="product-card-body">
+          <h3>Safety Items</h3>
+          <p>Protection for your electrical systems</p>
+          <ul class="product-features">
+            <li>Overload Protection</li>
+            <li>Overcurrent Protection</li>
+            <li>Safe System</li>
+          </ul>
+          <button class="btn-enquire" type="button" onclick="openProductModal('safety-items')">Enquire Now</button>
+        </div>
+      </article>
+
+      
       </div>
       <div class="products-controls">
         <button class="carousel-btn prev" type="button" aria-label="Scroll left">←</button>
@@ -2101,8 +2108,10 @@ footer{background:linear-gradient(135deg,#0a1a0e,#0d2d5e);color:#fff;padding:60p
           <option value="">-- Choose Product --</option>
           <option>GSM Mobile Starter</option>
           <option>Smart Irrigation System</option>
-          <option>Sensor Based System</option>
-          <option>Accessories</option>
+          <option>Solar Camera</option>
+          <option>Auto Switch</option>
+          <option>Float Switch</option>
+          <option>Safety Items</option>
         </select>
       </div>
       <div class="form-group">
@@ -2498,12 +2507,19 @@ const productData = {
     desc:"मोटर पंप का चौकीदार जो आटोमेटिक ON करे और सुरक्षा करे।",
 
     features:[
-      "Automatic Motor ON/OFF",
-      "Dry Run Protection",
-      "Easy Installation",
-      "Low Maintenance",
-      "Reliable Pump Protection",
-      "Smart Water Management"
+      "•	Automatic Motor ON/OFF Operation",
+      "•	Protects Motor from Dry Running",
+      "•	Maintains Continuous Water Supply",
+      "•	Saves Electricity & Reduces Manual Effort",
+      "•	Compact & Durable Design",
+      "•	Easy Installation & User-Friendly Operation",
+      "•	Suitable for Domestic & Agricultural Use",
+      "•	Reliable Pump Protection System",
+      "•	Low Maintenance Requirement",
+      "•	Compatible with Various Water Pumps",
+      "•	Improves Pump Efficiency & Performance",
+      "•	Safe and Smart Water Management Solution."
+
     ],
 
     whatsapp:
@@ -2520,11 +2536,19 @@ const productData = {
     desc:"पानी की टंकी भर जाने और खाली हो जाने पर मोटर को ऑन ऑफ करे।",
 
     features:[
-      "Automatic Water Tank Control",
-      "Dry Run Protection",
-      "Prevents Overflow",
-      "Automatic Motor Operation",
-      "Reliable Water Management"
+      "•	Automatic Water Tank Level Control",  
+      "•	Prevents Tank Overflow",
+      "•	Dry Run Protection",
+      "•	Automatic Motor ON/OFF Operation",
+      "•	Saves Water & Electricity",
+      "•	Reliable and Long-Lasting Performance",
+      "•	Easy Installation & Maintenance",
+      "•	Suitable for Overhead & Underground Tanks",
+      "•	Compatible with Different Motor Pumps",
+      "•	Safe and Efficient Water Management System",
+      "•	User-Friendly Operation",
+      "•	Ideal for Agriculture, Home & Industrial Use"
+
     ],
 
     whatsapp:
@@ -2541,12 +2565,25 @@ const productData = {
     desc:"खेत की सबमर्सिबल पंप कहीं से कभी भी मोबाइल से चालू और बंद करें।",
 
     features:[
-      "Mobile ON/OFF Control",
-      "SMS Alerts",
-      "Voltage Protection",
-      "Water Level Monitoring",
-      "Dry Run Protection",
-      "Smart Irrigation System"
+      "1.	Start or stop your motor pump from anywhere using your mobile phone.",  
+      "2.	Control the motor without visiting the field.",
+      "3.	Get complete motor status and information on your mobile.",
+      "4.	View the motor's past running history anytime.",
+      "5.	Receive alerts when electricity goes ON or OFF.",
+      "6.	Works with any 4G or 5G SIM card.",
+      "7.	Built-in battery backup for uninterrupted operation.",
+      "8.	Protects your motor from damage and faults.",
+      "9.	Monitor voltage and current (ampere) directly on your mobile.",
+      "10.	Receive alerts for: Phase Failure, Overload, Dry Run",
+      "11.	Set a timer to automatically start or stop the motor.",
+      "12.	Protection against: Over Voltage, Low Voltage",
+      "13.	Built-in Overload Protection.",
+      "14.	Supports both Auto Mode and Manual Mode.",
+      "15.	Suitable for all types of motor pumps.",
+      "16.	Supports both Single-Phase and Three-Phase motors.",
+      "17.	Saves time, electricity, water, and labor.",
+      "18.	Reliable solution for agriculture, farms, and water management applications."
+
     ],
 
     whatsapp:
@@ -2568,7 +2605,17 @@ const productData = {
       "Safety Shoes",
       "Fire Protection",
       "Electrical Safety",
-      "Industrial Safety"
+      "Industrial Safety",
+      "•	Electrical Rubber Mat",
+      "•	Fire Extinguisher",
+      "•	Welding Safety Equipment",
+      "•	Industrial First Aid Kit",
+      "•	Warning Safety Sign Boards",
+      "•	Arc Flash Protection Kit",
+      "•	Insulated Hand Tools",
+      "•	Safety Torch & Emergency Lights",
+      "•	Lockout Tagout (LOTO) Devices"
+
     ],
 
     whatsapp:
@@ -2585,12 +2632,21 @@ const productData = {
     desc:"मिट्टी की नमी के अनुसार ऑटोमैटिक सिंचाई सिस्टम।",
 
     features:[
-      "Automated Irrigation",
-      "Water Saving",
-      "Mobile Monitoring",
-      "Real-Time Alerts",
-      "Smart Farming",
-      "Easy Installation"
+      "•	Automated Irrigation Control System",
+      "•	Mobile-Based Pump Monitoring & Operation",
+      "•	Saves Water, Electricity & Labor",
+      "•	Smart Water Management Technology",
+      "•	Remote Access Through Mobile Phone",
+      "•	Improves Irrigation Efficiency",
+      "•	Reduces Manual Farming Effort",
+      "•	Compatible with Different Irrigation Setups",
+      "•	Real-Time Alerts & Notifications",
+      "•	Reliable and User-Friendly Operation",
+      "•	Enhances Crop Productivity",
+      "•	Easy Installation & Maintenance",
+      "•	Ideal for Modern Agriculture Practices",
+      "•	Safe and Efficient Irrigation Solution"
+
     ],
 
     whatsapp:
@@ -2607,12 +2663,21 @@ const productData = {
     desc:"स्मार्ट कैमरा जो आपके खेत की निगरानी करे।",
 
     features:[
-      "24x7 Monitoring",
-      "Solar Powered",
-      "Night Vision",
-      "Motion Alerts",
-      "Mobile App Access",
-      "Weatherproof Design"
+      "•	Solar Powered Wireless Camera",
+      "•	Remote Monitoring Through Mobile App",
+      "•	Full HD Video Recording",
+      "•	Night Vision Support",
+      "•	Motion Detection Alerts",
+      "•	Two-Way Audio Communication",
+      "•	Weatherproof & Durable Design",
+      "•	Works in Remote Areas Without Electricity",
+      "•	Rechargeable Battery Backup",
+      "•	Easy Installation & Low Maintenance",
+      "•	Real-Time Security Notifications",
+      "•	Supports Memory Card & Cloud Storage",
+      "•	Ideal for Farms, Homes, Shops & Warehouses",
+      "•	Smart and Reliable Security Solution"
+
     ],
 
     whatsapp:
